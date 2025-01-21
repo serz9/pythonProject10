@@ -20,3 +20,5 @@ def get_mask_account(bankaccount: Union[str]) ->Union[str]:
     """функция возвращает  скрытый номер банковского счета"""
     new_bankaccount = len(bankaccount[14:16]) * "*" + bankaccount[16:20]
     return new_bankaccount
+
+
