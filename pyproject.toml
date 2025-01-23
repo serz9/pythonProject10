@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "pythonproject10"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[tool.poetry.group.lint.dependencies]
+mypy = "^1.14.0"
+black = "^24.10.0"
+isort = "^5.13.2"
+flake8 = "^7.1.1"
+
+
+[tool.poetry.group.dev.dependencies]
+lint = "^1.2.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.flake8]
+max-line-length = 119
+
+[tool.black]
+line-length = 119
+exclude = """ ( /(
+                 | .git
+                 )) """
+
+
+
+[tool.mypy]
+disullow_antyped_defs = true
+warn_return_any = true
+exclude = 'venv'
+
+[tool.isort]
+line_length = 119
+
+
+
