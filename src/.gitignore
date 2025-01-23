@@ -1,5 +1,5 @@
-__pacahce__/
-venv
-.idea/
-*.pyc
-*.log
+  __pycahce__/
+  venv
+  .idea/
+  *.pyc
+  *.log
