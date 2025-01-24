@@ -22,4 +22,5 @@ def get_mask_account(bankaccount: Union[str]) -> Union[str]:
     new_bankaccount = len(bankaccount[14:16]) * "*" + bankaccount[16:20]
     return new_bankaccount
 
-
+get_mask_account('счет 293848484005005500')
+get_mask_card_number('Visa Gdjfjf 8384 8885 5999 8899')
