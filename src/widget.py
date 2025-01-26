@@ -1,29 +1,10 @@
-#from src.masks import *
 from src.masks import get_mask_account, get_mask_card_number
 from typing import Union
 
-#def mask_counter(cart_count_date: Union[str]) -> Union[str]:
-    #""" функция возвращает замаскированные счет или номер банковской карты """
 
-    #letter_ = []
-    #number_ = []
 
-    #for i in cart_count_date:
-        #if i == " " or i.isalpha() == True:
-           # letter_.append(i)
-        #if i.isnumeric() == True:
-           # number_.append(i)
-
-    #letter_1 = ''.join(letter_)
-    #number_1 = ''.join(number_)
-
-    #res = str(letter_1) + " " + str(number_1)
-    #print(res)
-    #return res
-
-#mask_counter('Visa Platinum 7000792289606361')
 def mask_account_card(riquisites: str) -> str:
-
+    """ функция возвращае замаскированный счет или номер банковской карты"""
     startstring = riquisites.startswith('счет')
 
     if startstring == True:
@@ -33,7 +14,7 @@ def mask_account_card(riquisites: str) -> str:
 
 
 
-mask_account_card('Visa PLatinum 7000792289606361')
+#mask_account_card('Visa Uniod 7000792289606361')
 
 
 def get_time(timest: Union[str]):
