@@ -1,20 +1,47 @@
-from src.masks import get_mask_account, get_mask_card_number
 from typing import Union
 
+from src.masks import get_mask_account, get_mask_card_number
 
 
 def mask_account_card(riquisites: str) -> str:
     """ функция возвращае замаскированный счет или номер банковской карты"""
-    startstring = riquisites.startswith('счет')
 
-    if startstring == True:
-        return get_mask_account(riquisites)
-    else:
-        return get_mask_card_number(riquisites)
+    riquisites_1 = list(riquisites)
+    riquisites_letter =[]
+    riquisites_number =[]
+
+    riquisites_ = riquisites.split(' ')
+
+    for i in riquisites_:
+        if i.isnumeric() == True:
+            riquisites_number.append(i)
+        if i.isalpha() == True:
+            riquisites_letter.append(i)
+
+    riquisites_letter_ = ' '.join(riquisites_letter)
+    riquisites_number_ = ''.join(riquisites_number)
+
+    if riquisites_[0] != 'Счет':
+        res = riquisites_letter_ + " " + get_mask_card_number(riquisites_number_)
+        return res
+    if riquisites_[0] == 'Счет':
+        res = riquisites_letter_ + " " + get_mask_account(riquisites_number_)
+        return res
+
+    #startstring = riquisites.startswith('счет')
+
+    #if startstring == True:
+        #print( 'Счет' + get_mask_account(riquisites))
+       # return  'Cчет' + get_mask_account(riquisites)
+   #else:
+        #print()
+        # get_mask_card_number(riquisites)
 
 
 
-#mask_account_card('Visa Uniod 7000792289606361')
+mask_account_card('Счет 23452345234523452345')
+#mask_account_card('Visa Platinum 7000792289606361')
+
 
 
 def get_time(timest: Union[str]):
