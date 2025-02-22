@@ -10,7 +10,6 @@ def filter_by_state(dictioneris: list[dict:str, Any], state=None):
         if i['state'] == state:
             dictioneris_1.append(i)
 
-    print(dictioneris_1)
     return dictioneris_1
 
 
@@ -21,7 +20,6 @@ def sort_by_date(dictionaries: list[dict[str, Any]], reverse: bool = True) -> li
 
     """функция сортировки по дате по убыванию"""
 
-    print(sorted(dictionaries, key=lambda x: datetime.strptime(x['date'], '%Y-%m-%dT%H:%M:%S.%f'), reverse=reverse))
     return sorted(dictionaries, key=lambda x: datetime.strptime(x['date'], '%Y-%m-%dT%H:%M:%S.%f'), reverse=reverse)
 
 
