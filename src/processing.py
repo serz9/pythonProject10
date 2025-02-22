@@ -5,7 +5,7 @@ def filter_by_state(dictioneris: list[dict[str, Any]], state=None):
 
     """ функция сортировки словаря """
 
-    dictioneris_1 = []
+    dictioneris_1: list = []
 
     for i in dictioneris:
         if i['state'] == state:
