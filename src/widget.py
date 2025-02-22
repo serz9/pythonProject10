@@ -32,8 +32,7 @@ def mask_account_card(riquisites: str) -> str:
 
 mask_account_card('Счет 23452345234523452345')
 
-
-def get_time(timest: Union[str]) ->str :
+def get_time(timest: Union[str]) -> str:
 
     """ функция изменяет формат строки в обьекте Data """
 
