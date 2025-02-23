@@ -35,7 +35,7 @@ exclude = """ ( /(
 
 
 [tool.mypy]
-disallow_antyped_defs = folse
+disallow_antyped_defs = false
 warn_return_any = true
 exclude = 'venv'
 
