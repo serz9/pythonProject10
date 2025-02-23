@@ -1,4 +1,5 @@
 from typing import Union
+
 from src.masks import get_mask_account, get_mask_card_number
 
 
@@ -6,9 +7,8 @@ def mask_account_card(riquisites: str) -> str:
 
     """ функция возвращае замаскированный счет или номер банковской карты"""
 
-
-    riquisites_letter:list[str] =[]
-    riquisites_number:list[str] =[]
+    riquisites_letter: list[str] = []
+    riquisites_number: list[str] = []
 
     riquisites_ = riquisites.split(' ')
 
@@ -31,6 +31,7 @@ def mask_account_card(riquisites: str) -> str:
 
 mask_account_card('Счет 23452345234523452345')
 
+
 def get_time(timest: Union[str]) -> str:
 
     """ функция изменяет формат строки в обьекте Data """
@@ -44,4 +45,5 @@ def get_time(timest: Union[str]) -> str:
 
 
 get_time('2018-11-07T13:12:05.485858')
+
 

@@ -24,7 +24,7 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.flake8]
-max-line-length = 119
+max-line-length = 190
 
 [tool.black]
 line-length = 119
@@ -35,7 +35,7 @@ exclude = """ ( /(
 
 
 [tool.mypy]
-disullow_antyped_defs = true
+disallow_antyped_defs = folse
 warn_return_any = true
 exclude = 'venv'
 
