@@ -6,7 +6,6 @@ def mask_account_card(riquisites: str) -> str:
 
     """ функция возвращае замаскированный счет или номер банковской карты"""
 
-
     riquisites_letter: list[str] = []
     riquisites_number: list[str] = []
 
@@ -29,10 +28,7 @@ def mask_account_card(riquisites: str) -> str:
         return res
 
 
-
-
 mask_account_card('Счет 23452345234523452345')
-
 
 
 def get_time(timest: Union[str]) -> str:
