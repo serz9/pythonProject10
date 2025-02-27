@@ -1,5 +1,4 @@
 from typing import Union
-
 from src.masks import get_mask_account, get_mask_card_number
 
 
@@ -33,7 +32,6 @@ def mask_account_card(riquisites: str) -> str:
 
 
 mask_account_card('Счет 23452345234523452345')
-#mask_account_card('Visa Platinum 7000792289606361')
 
 
 
