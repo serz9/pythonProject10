@@ -1,7 +1,7 @@
 from datetime import datetime
 
 
-def filter_by_state(dictioneris: list[dict[str, any]], state ='EXECUTED') -> list[dict[str, any]]:
+def filter_by_state(dictioneris: list[dict[str, any]], state:str = None) -> list[dict[str, any]]:
 
     """ функция сортировки словаря """
 
