@@ -25,5 +25,3 @@ def get_mask_account(bankaccount: Union[str]) -> Union[str]:
     new_bankaccount = len(bankaccount[14:16]) * "*" + bankaccount[16:20]
     print(new_bankaccount)
     return new_bankaccount
-
-
