@@ -45,5 +45,3 @@ def get_time(timest: Union[str]) -> str:
 
 
 get_time('2018-11-07T13:12:05.485858')
-
-
