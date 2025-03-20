@@ -33,7 +33,7 @@ def test_get_mask_card_number_short():
 
 def test_get_mask_account():
 
-    """ Проверка на соответствие выходных параметров  vпри привы """
+    """ Проверка на соответствие выходных параметров при заведомо неправильных входных  """
 
     assert get_mask_account('293848484005005500555') == '**5500'
 
@@ -73,11 +73,11 @@ def test_sort_by_date(coll_1):
     assert sort_by_date(coll_1) == [{'id': 41428829, 'state': 'EXECUTED', 'date': '2019-07-03T18:35:29.512364'}, {'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572'}]
 
 
-@pytest.mark.parametrize('value,expected',[('Счет 23452345234523452345', 'Счет **2345',),
+@pytest.mark.parametrize('value,expected', [('Счет 23452345234523452345', 'Счет **2345',),
                             ('Visa 3456 4657 5767 7373', 'Visa 3456 46** **** 7373'),])
 def test_get_mask_account_card(value, expected):
     assert mask_account_card(value) == expected
 
 
 def test_get_time():
-    assert get_time ('2018-11-07T13:12:05.485858') == '07.11.2018'
+    assert get_time('2018-11-07T13:12:05.485858') == '07.11.2018'
