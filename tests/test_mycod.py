@@ -10,25 +10,25 @@ def test_get_mask_card_number():
     assert get_mask_card_number('8384888559998899') == '8384 88** **** 8899'
 
 
-def test_get_mask_card_number():
+def test_get_mask_card_number_long():
 
     """ Проверка на соответствие выходных параметров ожидаемым при привышении длины строки """
 
     assert get_mask_card_number('83848885599988991') == '8384 88** **** 8899'
 
 
-def test_get_mask_card_number():
+def test_get_mask_card_number_error():
 
     """ Проверка на не соответствие выходных параметров ожидемых при заведомо не правильных входных """
 
-    assert get_mask_card_number('ashsahshajjjajaj') == '8384 88** **** 8899'
+    assert get_mask_card_number('assdasddsdssassd') == '8384 88** **** 8899'
 
 
-def test_get_mask_card_number():
+def test_get_mask_card_number_short():
 
     """ Проверка на не соответствие выходных параметров ожидемых при заведомо не правильных входных """
 
-    assert get_mask_card_number('') == '8384 88** **** 8899'
+    assert get_mask_card_number('384848') == '8384 88** **** 8899'
 
 
 def test_get_mask_account():
@@ -38,21 +38,21 @@ def test_get_mask_account():
     assert get_mask_account('293848484005005500555') == '**5500'
 
 
-def test_get_mask_account():
+def test_get_mask_account_long():
 
     """ Проверка на соответствие выходных параметров ожидаеемым  при привышении длинны строки"""
 
     assert get_mask_account('293848484005005500') == '**5500'
 
 
-def test_get_mask_account():
+def test_get_mask_account_error():
 
     """ Проверка на не соответствие выходных параметров ожидаеемым  при заведомо неправильных  входных """
 
     assert get_mask_account('ahshdjsjajsjdjfj') == '**5500'
 
 
-def test_get_mask_account():
+def test_get_mask_account_empty():
 
     """ Проверка на не соответствие выходных параметров ожидаеемым  при заведомо неправильных  входных """
 

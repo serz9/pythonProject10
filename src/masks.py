@@ -9,6 +9,8 @@ def get_mask_card_number(cartdate: Union[str]) -> Union[str]:
         print(" Вы ввели количество символов более необходимого ")
     if len(cartdate) < 16:
         print(" Вы ввели  менее необходимого количество символов ")
+    if cartdate.isdigit() == False:
+        print (" Некоректные данные ")
 
 
 
@@ -30,6 +32,13 @@ def get_mask_card_number(cartdate: Union[str]) -> Union[str]:
 def get_mask_account(bankaccount: Union[str]) -> Union[str]:
 
     """функция возвращает  скрытый номер банковского счета"""
+
+    if len(bankaccount) > 20:
+        print(" Вы ввели количество символов более необходимого ")
+    if len(bankaccount) < 20:
+        print(" Вы ввели  менее необходимого количество символов ")
+    if bankaccount.isdigit() == False:
+        print(" Некоректные данные ")
 
     new_bankaccount = len(bankaccount[14:16]) * "*" + bankaccount[16:20]
     print(new_bankaccount)
