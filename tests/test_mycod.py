@@ -1,7 +1,8 @@
 import pytest
-from src.masks import get_mask_card_number, get_mask_account
-from src.processing import sort_by_date, filter_by_state
-from src.widget import mask_account_card, get_time
+from src.masks import get_mask_account, get_mask_card_number
+from src.processing import sort_by_date
+from src.widget import get_time, mask_account_card
+
 
 def test_get_mask_card_number():
 
@@ -31,11 +32,11 @@ def test_get_mask_card_number_short():
     assert get_mask_card_number('384848') == " Вы ввели количество символов менее необходимого "
 
 
-def test_get_mask_account_long():
+def test_get_mask_account_short():
 
-    """ Проверка на соответствие выходных параметров при заведомо неправильных входных  """
+    """ Проверка на не соответствие выходных параметров ожидаеемым  при заведомо неправильных  входных """
 
-    assert get_mask_account('293848484005005500555') == "Вы ввели количество символов более необходимого "
+    assert get_mask_account('373664') == " Вы ввели количество символов менее необходимого "
 
 
 def test_get_mask_account_long():
@@ -52,26 +53,20 @@ def test_get_mask_account_error():
     assert get_mask_account('ahshdjsjajsjdjfj') == " Некорректные данные "
 
 
-def test_get_mask_account_short():
-
-    """ Проверка на не соответствие выходных параметров ожидаеемым  при заведомо неправильных  входных """
-
-    assert get_mask_account('373664') == " Вы ввели количество символов менее необходимого "
-
-
-
-#def test_filter_by_state(coll):
+#def test_filter_by_state():
 
    # """ Проверка на правильность фильтрации """
 
-    #assert filter_by_state(coll) == [{'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572'}]
+   #assert filter_by_state([{'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572'},
+                           # {'id': 41428829, 'state': 'CANCELED', 'date': '2019-07-03T18:35:29.512364'}]) == [{'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572'}]
 
 
 def test_sort_by_date(coll_1):
 
     """ Проверка  сортировки по дате """
 
-    assert sort_by_date(coll_1) == [{'id': 41428829, 'state': 'EXECUTED', 'date': '2019-07-03T18:35:29.512364'}, {'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572'}]
+    assert sort_by_date(coll_1) == [{'id': 41428829, 'state': 'EXECUTED', 'date': '2019-07-03T18:35:29.512364'},
+                                    {'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572'}]
 
 
 @pytest.mark.parametrize('value,expected', [('Счет 23452345234523452345', 'Счет **2345',),
