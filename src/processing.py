@@ -1,11 +1,12 @@
 from datetime import datetime
+from typing import Union
 
 
 def filter_by_state(dictioneris: list[dict[str, any]], state:str = None) -> list[dict[str, any]]:
 
     """ функция сортировки словаря """
 
-    dictioneris_1:list = []
+    dictioneris_1 = []
 
     for i in dictioneris:
         if i['state'] == state:

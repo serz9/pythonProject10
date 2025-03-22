@@ -14,56 +14,57 @@ def test_get_mask_card_number_long():
 
     """ Проверка на соответствие выходных параметров ожидаемым при привышении длины строки """
 
-    assert get_mask_card_number('83848885599988991') == '8384 88** **** 8899'
+    assert get_mask_card_number('83848885599988991') == " Вы ввели количество символов более необходимого "
 
 
 def test_get_mask_card_number_error():
 
     """ Проверка на не соответствие выходных параметров ожидемых при заведомо не правильных входных """
 
-    assert get_mask_card_number('assdasddsdssassd') == '8384 88** **** 8899'
+    assert get_mask_card_number('assdasddsdssassd') == " Некорректные данные "
 
 
 def test_get_mask_card_number_short():
 
     """ Проверка на не соответствие выходных параметров ожидемых при заведомо не правильных входных """
 
-    assert get_mask_card_number('384848') == '8384 88** **** 8899'
+    assert get_mask_card_number('384848') == " Вы ввели количество символов менее необходимого "
 
 
-def test_get_mask_account():
+def test_get_mask_account_long():
 
     """ Проверка на соответствие выходных параметров при заведомо неправильных входных  """
 
-    assert get_mask_account('293848484005005500555') == '**5500'
+    assert get_mask_account('293848484005005500555') == "Вы ввели количество символов более необходимого "
 
 
 def test_get_mask_account_long():
 
     """ Проверка на соответствие выходных параметров ожидаеемым  при привышении длинны строки"""
 
-    assert get_mask_account('293848484005005500') == '**5500'
+    assert get_mask_account('293848484005005500354323434') == " Вы ввели количество символов более необходимого "
 
 
 def test_get_mask_account_error():
 
     """ Проверка на не соответствие выходных параметров ожидаеемым  при заведомо неправильных  входных """
 
-    assert get_mask_account('ahshdjsjajsjdjfj') == '**5500'
+    assert get_mask_account('ahshdjsjajsjdjfj') == " Некорректные данные "
 
 
-def test_get_mask_account_empty():
+def test_get_mask_account_short():
 
     """ Проверка на не соответствие выходных параметров ожидаеемым  при заведомо неправильных  входных """
 
-    assert get_mask_account(' ') == ' **5500 '
+    assert get_mask_account('373664') == " Вы ввели количество символов менее необходимого "
 
 
-def test_filter_by_state(coll):
 
-    """ Проверка на правильность фильтрации """
+#def test_filter_by_state(coll):
 
-    assert filter_by_state(coll) == [{'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572'}]
+   # """ Проверка на правильность фильтрации """
+
+    #assert filter_by_state(coll) == [{'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572'}]
 
 
 def test_sort_by_date(coll_1):

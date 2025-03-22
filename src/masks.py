@@ -3,14 +3,17 @@ from typing import Union
 
 def get_mask_card_number(cartdate: Union[str]) -> Union[str]:
 
-    """функция возвращает скрытый номер банковской карты"""
+    """ функция возвращает скрытый номер банковской карты """
 
+    if cartdate.isdigit() == False:
+        print(" Некорректные данные ")
+        return " Некорректные данные "
     if len(cartdate) > 16:
         print(" Вы ввели количество символов более необходимого ")
+        return " Вы ввели количество символов более необходимого "
     if len(cartdate) < 16:
         print(" Вы ввели  менее необходимого количество символов ")
-    if cartdate.isdigit() == False:
-        print (" Некоректные данные ")
+        return " Вы ввели количество символов менее необходимого "
 
 
 
@@ -33,17 +36,20 @@ def get_mask_account(bankaccount: Union[str]) -> Union[str]:
 
     """функция возвращает  скрытый номер банковского счета"""
 
+    if bankaccount.isdigit() == False:
+        print(" Некорректные данные ")
+        return " Некорректные данные "
     if len(bankaccount) > 20:
         print(" Вы ввели количество символов более необходимого ")
+        return " Вы ввели количество символов более необходимого "
     if len(bankaccount) < 20:
-        print(" Вы ввели  менее необходимого количество символов ")
-    if bankaccount.isdigit() == False:
-        print(" Некоректные данные ")
+        print(" Вы ввели количество символов  менее необходимого")
+        return " Вы ввели количество символов менее необходимого "
 
-    new_bankaccount = len(bankaccount[14:16]) * "*" + bankaccount[16:20]
+    new_bankaccount = len(bankaccount[14:16])*'*' + bankaccount[16:20]
     print(new_bankaccount)
     return new_bankaccount
 
 
-get_mask_card_number('8384888559998899')
+get_mask_card_number('3345555559998899')
 get_mask_account('83848885599988999879')
