@@ -2,7 +2,7 @@ from datetime import datetime
 from typing import Any
 
 
-def filter_by_state(dictioneris: list[dict[str, Any]], state: str = None) -> list[dict[str, Any]]:
+def filter_by_state(dictioneris: list[dict[str, Any]], state = None) -> list[dict[str, Any]]:
 
     """ функция сортировки словаря """
 
