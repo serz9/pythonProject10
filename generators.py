@@ -32,6 +32,21 @@ tranzactions_list = [
             "to": "Счет 75651667383060284188"
         }]
 
+
+def filter_by_carrency(tranzactions_list: list[str], currency: [str]):
+    """   функция фильтрации   """
+
+    res = (i for i in tranzactions_list if i['operationAmount']['currency']['code'] == currency)
+    for n in res:
+        yield n
+
+
+filter_run = filter_by_carrency(tranzactions_list, 'USD')
+for tranzaction in filter_run:
+    print(next(filter_run))
+    print(tranzaction)
+
+filter_by_carrency(tranzactions_list, 'USD')
 #def filter_by_carrency( tranzactions_list: list[dict], currency: [str] ):
 
    # """    функция фильтрации   """
@@ -116,30 +131,3 @@ card_number_generator(1,55)
 #card_number_generator(1,333333)
 #def get_number(number):
 
-    #"""функция возвращает скрытый номер банковской карты"""
-
-    #number = (
-            #len(number[0:4])*"X"
-            #+ " "
-            #+ len(number[4:6])* "X"
-            #+ len(number[6:8]) * "X"
-            #+ " "
-            #+ len(number[8:12])* "X"
-            #+ " "
-            #+ number[12:16]
-    #)
-    #print(number)
-    #return number
-
-#get_number(number)
-def filter_by_carrenc(tranzactions_list:list[str],currency: [str]):
-    res = (i for i in tranzactions_list if i['operationAmount']['currency']['code'] == currency)
-    for n in res:
-        yield n
-
-filter_run = filter_by_carrenc(tranzactions_list, 'USD')
-for tranzaction in filter_run:
-    print(next(filter_run))
-    print(tranzaction)
-
-filter_by_carrenc(tranzactions_list,'USD')
