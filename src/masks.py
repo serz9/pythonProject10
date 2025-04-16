@@ -1,5 +1,6 @@
 from typing import Union
 
+
 def get_mask_card_number(cartdate: Union[str]) -> Union[str]:
 
     """функция возвращает скрытый номер банковской карты"""
@@ -25,4 +26,4 @@ def get_mask_account(bankaccount: Union[str]) -> Union[str]:
     print(new_bankaccount)
     return new_bankaccount
 
-get_mask_account('78976567656765678796')
+

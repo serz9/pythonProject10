@@ -2,7 +2,7 @@
 name = "pythonproject10"
 version = "0.1.0"
 description = ""
-authors = ["Your Name <you@example.com>"]
+authors = ["Serz Kuh"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
@@ -18,6 +18,7 @@ flake8 = "^7.1.1"
 
 [tool.poetry.group.dev.dependencies]
 lint = "^1.2.1"
+pytest-cov = "^6.0.0"
 
 [build-system]
 requires = ["poetry-core"]
