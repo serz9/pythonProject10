@@ -44,7 +44,6 @@ def filter_by_carrency(tranzactions_list: list[str], currency: [str]):
 
 filter_run = filter_by_carrency(tranzactions_list, 'USD')
 for tranzaction in filter_run:
-    print(next(filter_run))
     print(tranzaction)
 
 filter_by_carrency(tranzactions_list, 'USD')
@@ -54,8 +53,8 @@ def transaction_descriptions(tranzactions_list):
     """    описание транзакций   """
 
     for i in tranzactions_list:
-        res = (i['description'] for i in tranzactions_list)
-        print(next(res))
+        rez=(i['description'] for i in tranzactions_list)
+        print(i['description'])
 
 transaction_descriptions(tranzactions_list)
 
