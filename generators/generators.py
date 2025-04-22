@@ -66,6 +66,8 @@ def get_number(number):
     formatted_card_number = ' '.join([card_number[i:i+4] for i in range(0, 16, 4)])
     print(formatted_card_number)
     return formatted_card_number
+
+
 def card_number_generator(start, end):
 
     """   функция генератор номеров карт   """
