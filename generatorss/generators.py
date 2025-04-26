@@ -78,4 +78,4 @@ def card_number_generator(start, end):
         number = count_0 + str(j)
         get_number(number)
 
-card_number_generator(1,55)
+card_number_generator(1,1)
