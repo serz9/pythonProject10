@@ -1,5 +1,5 @@
 import pytest
-from generatorss.generators import filter_by_carrency,transaction_descriptions,tranzactions_list,get_number,card_number_generator,number
+from generatorss.generators import filter_by_carrency, transaction_descriptions, tranzactions_list, get_number, card_number_generator, number
 
 def test_filter_by_carency():
 
