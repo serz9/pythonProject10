@@ -20,11 +20,10 @@ def test_transaction_descriptions(transaction_descriptions):
     assert res_ == ['Перевод организации', 'Перевод со счета на счет']
 
 
-def test_get_number(get_number,number):
+def test_get_number():
 
     """   Перевод номера в формат XXXX XXXX XXXX 1432   """
 
-    number == '1222344323342343'
     res = str(get_number(number))
     assert res == 'XXXX XXXX XXXX 2343'
 
@@ -34,6 +33,8 @@ def test_card_number_generator(card_number_generator):
 
     res = str(card_number_generator(1,1))
     assert res == '0000 0000 0000 0001'
+
+
 
 
 

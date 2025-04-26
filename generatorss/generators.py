@@ -68,6 +68,7 @@ def get_number(number):
     return formatted_card_number
 
 
+
 def card_number_generator(start, end):
 
     """   функция генератор номеров карт   """
