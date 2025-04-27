@@ -35,5 +35,13 @@ def test_tranzact_list():
             "to": "Счет 75651667383060284188"
          } ]
 
+@pytest.fixture
+def card_number_generator(start, end):
 
+    """   функция генератор номеров карт   """
 
+    global number
+    for j in range(start, end + 1):
+        count_0 = "0" * (16 - len(str(j)))
+        number = count_0 + str(j)
+        get_number(number)

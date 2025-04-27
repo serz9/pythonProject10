@@ -35,7 +35,7 @@ tranzactions_list = [
 
 def filter_by_carrency(tranzactions_list: list[str], currency: [str]):
 
-    """   функция фильтрации   """
+    """   Функция фильтрации   """
 
     res = (i for i in tranzactions_list if i['operationAmount']['currency']['code'] == currency)
     for n in res:
@@ -50,17 +50,17 @@ filter_by_carrency(tranzactions_list, 'USD')
 
 def transaction_descriptions(tranzactions_list):
 
-    """    описание транзакций   """
+    """   Описание транзакций   """
 
     for i in tranzactions_list:
-        rez=(i['description'] for i in tranzactions_list)
+        rez = (i['description'] for i in tranzactions_list)
         print(i['description'])
 
 transaction_descriptions(tranzactions_list)
 
 def get_number(number):
 
-    """   функция  преобразует номера карт в формат XXXX XXXX XXXX 4564   """
+    """   Функция  преобразует номера карт в формат 3432 3432 4343 4564   """
 
     card_number = str(number).zfill(16)
     formatted_card_number = ' '.join([card_number[i:i+4] for i in range(0, 16, 4)])
