@@ -22,14 +22,15 @@ def mask_account_card(riquisites: str) -> str:
 
     if riquisites_[0] != 'Счет':
         res = riquisites_letter_ + " " + get_mask_card_number(riquisites_number_)
+        print(res)
         return res
     if riquisites_[0] == 'Счет':
         res = riquisites_letter_ + " " + get_mask_account(riquisites_number_)
         return res
 
 
-mask_account_card('Счет 23452345234523452345')
-
+#mask_account_card('Счет 23452345234523452345')
+mask_account_card('Visa 3456 4657 5767 7373')
 
 def get_time(timest: Union[str]) -> str:
 
