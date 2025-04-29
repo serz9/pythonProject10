@@ -71,7 +71,7 @@ def get_number(number):
 
 def card_number_generator(start, end):
 
-    """   функция генератор номеров карт   """
+    """   Функция генератор номеров карт   """
 
     global number
     for j in range(start, end + 1):
