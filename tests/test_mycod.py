@@ -18,15 +18,27 @@ def test_transaction_descriptions(transaction_descriptions):
     assert res_ == ['Перевод организации', 'Перевод со счета на счет']
 
 
+
+#def get_number(number):
+
+    #"""   Функция  преобразует номера карт в формат 3432 3432 4343 4564   """
+
+    #card_number = str(number).zfill(16)
+    #formatted_card_number = ' '.join([card_number[i:i+4] for i in range(0, 16, 4)])
+    #print(formatted_card_number)
+    #return formatted_card_number#
+
+
 @pytest.mark.parametrize('test,expected',[('1232323423422233','1232 3234 2342 2233'),('2223324334343344','2223 3243 3434 3344')])
 def test_get_number(test, expected):
 
-    """   Перевод номера в формат XXXX XXXX XXXX 1432   """
+    """   Перевод номера в формат 1234 2343 3432 1432   """
 
     assert get_number(test) == expected
 
 
-def test_card_number_generator(card_number_generator):
+
+def test_card_namber_generator(card_number_generator):
 
     """   Функция генератор номеров карт   """
 
