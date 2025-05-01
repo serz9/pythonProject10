@@ -1,4 +1,3 @@
-
 tranzactions_list = [
 
         {
@@ -33,30 +32,35 @@ tranzactions_list = [
         }]
 
 
-def filter_by_carrency(tranzactions_list: list[str], currency: [str]):
+def filter_by_currency(tranzactions_list: list[str], currency: [str]):
 
     """   Функция фильтрации   """
 
     res = (i for i in tranzactions_list if i['operationAmount']['currency']['code'] == currency)
-    for n in res:
-        yield n
+    for i in res:
+        yield i
 
 
-filter_run = filter_by_carrency(tranzactions_list, 'USD')
+filter_run = filter_by_currency(tranzactions_list, 'USD')
 for tranzaction in filter_run:
     print(tranzaction)
 
-filter_by_carrency(tranzactions_list, 'USD')
+filter_by_currency(tranzactions_list, 'USD')
+
 
 def transaction_descriptions(tranzactions_list):
 
     """   Описание транзакций   """
 
-    for i in tranzactions_list:
-        rez = (i['description'] for i in tranzactions_list)
-        print(i['description'])
+    res = (i['description'] for i in tranzactions_list)
+    for i in res:
+        yield i
 
-transaction_descriptions(tranzactions_list)
+
+res_ = transaction_descriptions(tranzactions_list)
+for n in res_:
+    print(n)
+
 
 def get_number(number):
 
@@ -67,8 +71,6 @@ def get_number(number):
     print(formatted_card_number)
     return formatted_card_number
 
-
-
 def card_number_generator(start, end):
 
     """   Функция генератор номеров карт   """
@@ -78,5 +80,6 @@ def card_number_generator(start, end):
         count_0 = "0" * (16 - len(str(j)))
         number = count_0 + str(j)
         get_number(number)
+        return number
 
 card_number_generator(1,1)
