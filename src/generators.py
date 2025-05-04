@@ -52,14 +52,14 @@ def transaction_descriptions(tranzactions_list):
 
     """   Описание транзакций   """
 
-    res = (i['description'] for i in tranzactions_list)
-    for i in res:
-        yield i
+    #res = (i['description'] for i in tranzactions_list)
+    for i in tranzactions_list:
+        yield i['description']
 
 
 res_ = transaction_descriptions(tranzactions_list)
-for n in res_:
-    print(n)
+for n in tranzactions_list:
+    print(next(res_))
 
 
 def get_number(number):
@@ -67,9 +67,10 @@ def get_number(number):
     """   Функция  преобразует номера карт в формат 3432 3432 4343 4564   """
 
     card_number = str(number).zfill(16)
+    global formatted_card_number
     formatted_card_number = ' '.join([card_number[i:i+4] for i in range(0, 16, 4)])
     print(formatted_card_number)
-    return formatted_card_number
+    yield formatted_card_number
 
 def card_number_generator(start, end):
 
@@ -79,7 +80,7 @@ def card_number_generator(start, end):
     for j in range(start, end + 1):
         count_0 = "0" * (16 - len(str(j)))
         number = count_0 + str(j)
-        get_number(number)
-        return number
+        next(get_number(number))
 
-card_number_generator(1,1)
+
+card_number_generator(123,125)
