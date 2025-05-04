@@ -70,7 +70,7 @@ def get_number(number):
     global formatted_card_number
     formatted_card_number = ' '.join([card_number[i:i+4] for i in range(0, 16, 4)])
     print(formatted_card_number)
-    return formatted_card_number
+    yield formatted_card_number
 
 def card_number_generator(start, end):
 
@@ -80,10 +80,7 @@ def card_number_generator(start, end):
     for j in range(start, end + 1):
         count_0 = "0" * (16 - len(str(j)))
         number = count_0 + str(j)
-        res = get_number(number)
+        next(get_number(number))
 
-
-    for i in res :
-        next(i)
 
 card_number_generator(123,125)
