@@ -1,7 +1,7 @@
 import pytest
 from generatorss.generators import filter_by_currency, transaction_descriptions, get_number , tranzactions_list, card_number_generator,number
 
-def test_filter_by_curency():
+def test_filter_by_currency():
 
     """  Тест фильтрации данных  """
 
