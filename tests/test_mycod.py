@@ -1,5 +1,5 @@
 import pytest
-from src.generators import filter_by_currency, transaction_descriptions, get_number , tranzactions_list, card_number_generator,number
+from src.generators import filter_by_currency, transaction_descriptions, tranzactions_list, get_number_generator
 
 def test_filter_by_currency():
 
@@ -29,20 +29,27 @@ def test_transaction_descriptions(test_tranzact_list):
     #return formatted_card_number#
 
 
-@pytest.mark.parametrize('test,expected',[('1232323423422233','1232 3234 2342 2233'),('2223324334343344','2223 3243 3434 3344')])
-def test_get_number(test, expected):
+#@pytest.mark.parametrize('test,expected',[('1232323423422233','1232 3234 2342 2233'),('2223324334343344','2223 3243 3434 3344')])
+#def test_get_number(test, expected):
 
-    """   Перевод номера в формат 1234 2343 3432 1432   """
+   # """   Перевод номера в формат 1234 2343 3432 1432   """
 
-    assert get_number(test) == expected
-
+   # assert get_number(test) == expected
 
 
 def test_card_namber_generator():
 
-    """   Функция генератор номеров карт   """
+    """   Функция проверки генератора номеров карт   """
 
-    assert card_number_generator(1, 1) == '0000 0000 0000 0001'
+    res = list(get_number_generator(1,5))
+    expected = [
+'0000 0000 0000 0001',
+'0000 0000 0000 0002',
+'0000 0000 0000 0003',
+'0000 0000 0000 0004',
+'0000 0000 0000 0005']
+
+    assert res == expected
 
 
 
