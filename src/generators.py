@@ -60,6 +60,7 @@ def transaction_descriptions(tranzactions_list):
 res_ = transaction_descriptions(tranzactions_list)
 for n in tranzactions_list:
     print(next(res_))
+
 def get_number_generator(start,end):
 
     """   Функция  преобразует номера карт в формат 0000 0000 0043 4564   """
