@@ -3,6 +3,8 @@ from datetime import datetime
 
 
 def log (filename:[str] = None):
+
+    """   Функция декоратор с параметрами   """
     def decor(func):
         @wraps(func)
         def wrapp(*args,**kwargs):
