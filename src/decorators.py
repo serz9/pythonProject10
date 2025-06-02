@@ -24,7 +24,7 @@ def log (filename:[str] = None):
                         file.write(start_of_func_)
                         file.write(f'error{type(e).__name__}\n')
                 if not filename :
-                    print(f'error{type(e).__name__}')
+                    print(f'error {type(e).__name__}')
                     print(start_of_func_)
                     res=None
                     return res
@@ -35,9 +35,11 @@ def log (filename:[str] = None):
     return decor
 
 
-@log(filename ='logs.txt')
+@log()#(filename ='logs.txt')
 def functt(a):
+
     """ Функци """
+
     for i in range(a):
         print(a+c)
     return a

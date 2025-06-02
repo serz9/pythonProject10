@@ -14,8 +14,8 @@ def test_transaction_descriptions(test_tranzact_list):
 
     """   Тест описание транзакций   """
 
-    res_ == list(transaction_descriptions(test_tranzact_list))
-    assert res_ == ['Перевод организации', 'Перевод со счета на счет']
+    res == list(transaction_descriptions(test_tranzact_list))
+    assert res == ['Перевод организации', 'Перевод со счета на счет']
 
 
 
@@ -42,11 +42,18 @@ def test_card_namber_generator():
 
     """   Функция генератор номеров карт   """
 
-    assert card_number_generator(1, 1) == '0000 0000 0000 0001'
+    assert card_number_generator(1, 2) == '0000 0000 0000 0001'
 
 
+def test_decor():
+    with pytest.raises(NameError) as func_errors:
+        functt(5,3)
+        assert func_errors.value == NameError
 
-def test_decorators()  :
+def test_decorators(capsys) :
+     print('functt ok')
+     captured = capsys.readouterr()
+     assert captured.out == 'functt ok\n'
 
 
 
