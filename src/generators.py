@@ -66,6 +66,7 @@ def get_number(number):
 
     """   Функция  преобразует номера карт в формат 3432 3432 4343 4564   """
 
+
     card_number = str(number).zfill(16)
     global formatted_card_number
     formatted_card_number = ' '.join([card_number[i:i+4] for i in range(0, 16, 4)])
