@@ -1,8 +1,8 @@
-from functools import wraps
 from datetime import datetime
+from functools import wraps
 
 
-def log (filename:[str] = None):
+def log(filename:[str] = None):
 
     """   Функция декоратор с параметрами   """
     def decor(func):

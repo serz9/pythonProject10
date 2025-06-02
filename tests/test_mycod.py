@@ -47,10 +47,10 @@ def test_card_namber_generator():
 
 def test_decor():
     with pytest.raises(NameError) as func_errors:
-        functt(5,3)
+        func(5,3)
         assert func_errors.value == NameError
 
-def test_decorators(capsys) :
+def test_decorators(capsys):
      print('functt ok')
      captured = capsys.readouterr()
      assert captured.out == 'functt ok\n'
