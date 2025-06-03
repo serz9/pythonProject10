@@ -3,11 +3,12 @@ from typing import Union
 
 def get_mask_card_number(cartdate: Union[str]) -> Union[str]:
 
-    """функция возвращает скрытый номер банковской карты"""
+
+    """   функция возвращает скрытый номер банковской карты   """
 
     new_cartdate = (
             cartdate[0:4]
-            + " "
+            + ' '
             + cartdate[4:6]
             + len(cartdate[6:8]) * "*"
             + " "
@@ -15,7 +16,11 @@ def get_mask_card_number(cartdate: Union[str]) -> Union[str]:
             + " "
             + cartdate[12:16]
     )
+    print(new_cartdate)
     return new_cartdate
+get_mask_card_number('3456453454543454')
+
+
 
 
 def get_mask_account(bankaccount: Union[str]) -> Union[str]:
