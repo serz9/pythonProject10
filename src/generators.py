@@ -62,9 +62,9 @@ for n in tranzactions_list:
     print(next(res_))
 
 
-def get_number(number):
+#def get_number(number):
 
-    """   Функция  преобразует номера карт в формат 3432 3432 4343 4564   """
+   # """   Функция  преобразует номера карт в формат 3432 3432 4343 4564   """
 
 
     #card_number = str(number).zfill(16)
@@ -81,6 +81,7 @@ def card_number_generator(start, end):
         card_number = str(number).zfill(16)
         formatted_card_number = ' '.join([card_number[i:i+4] for i in range(0, 16, 4)])
         yield formatted_card_number
+
 
 #res = get_number_generator(1,5)
 all_numbers = card_number_generator(1,5)
