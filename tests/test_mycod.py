@@ -127,5 +127,16 @@ def test_card_namber_generator():
 
     assert res == expected
 
+
+def test_decor():
+    with pytest.raises(NameError) as func_errors:
+        func(5,3)
+        assert func_errors.value == NameError
+
+def test_decorators(capsys):
+     print('functt ok')
+     captured = capsys.readouterr()
+     assert captured.out == 'functt ok\n'
+
 def test_get_time():
     assert get_time('2018-11-07T13:12:05.485858') == '07.11.2018'
