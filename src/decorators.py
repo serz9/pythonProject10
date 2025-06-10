@@ -16,7 +16,8 @@ def log(filename:[str] = None):
                 res = func(*args,**kwargs)
                 if filename :
                      with open('logs.txt','a',encoding='utf-8') as file:
-                         file.write(f'{func.__name__} ok')
+                         file.write(f'{func.__name__} ok\n')
+                         file.write(f'{type(e).__name__}\n')
                          file.write(start_of_func)
                          file.write(end_of_func_)
                 if not filename:
@@ -27,14 +28,14 @@ def log(filename:[str] = None):
             except Exception as e:
                 if filename:
                     with open('logs.txt', 'a', encoding='utf-8') as file:
-                        file.write(f'error{type(e).__name__}')
+                        file.write(f'{func.__name__}\n')
+                        file.write(f'{type(e).__name__}\n')
                         file.write(start_of_func_)
                         file.write(end_of_func_)
                 if not filename :
                     print(f'error {type(e).__name__}')
                     print(start_of_func)
                     print(end_of_func_)
-
                     res = None
                     return res
 
@@ -44,7 +45,7 @@ def log(filename:[str] = None):
     return decor
 
 
-@log  ()#(filename ='logs.txt')
+@log(filename ='logs.txt')
 def functt(a):
 
     """ Функци """
