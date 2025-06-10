@@ -16,12 +16,12 @@ def log(filename:[str] = None):
                 res = func(*args,**kwargs)
                 if filename :
                      with open('logs.txt','a',encoding='utf-8') as file:
-                         file.write(start_of_func_)
                          file.write(f'{func.__name__} ok')
+                         file.write(start_of_func)
                          file.write(end_of_func_)
                 if not filename:
                     print(f'{func.__name__} ok')
-                    print(end_of_func)
+                    print(start_of_func)
                     print(end_of_func_)
                 return res
             except Exception as e:
@@ -32,8 +32,9 @@ def log(filename:[str] = None):
                         file.write(end_of_func_)
                 if not filename :
                     print(f'error {type(e).__name__}')
+                    print(start_of_func)
                     print(end_of_func_)
-                    print(start_of_func_)
+
                     res = None
                     return res
 
