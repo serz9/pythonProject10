@@ -10,22 +10,30 @@ def log(filename:[str] = None):
         def wrapp(*args,**kwargs):
             try:
                 start_of_func = datetime.now()
-                start_of_func_= start_of_func.strftime('%Y-%m-%d %H:%M:%S\n')
+                start_of_func_ = start_of_func.strftime('%Y-%m-%d %H:%M:%S:%f\n')
+                end_of_func = datetime.now()
+                end_of_func_ = end_of_func.strftime('%Y-%m_%d %H:%M:%S:%f\n')
                 res = func(*args,**kwargs)
                 if filename :
                      with open('logs.txt','a',encoding='utf-8') as file:
                          file.write(f'{func.__name__} ok\n')
+                         file.write(f'{start_of_funct_}')
+                         file.write(f'{end_of_func_}')
                 if not filename:
                     print(f'{func.__name__} ok\n')
+                    print(start_of_func_)
+                    print(end_of_func_)
                 return res
             except Exception as e:
                 if filename:
                     with open('logs.txt', 'a', encoding='utf-8') as file:
-                        file.write(start_of_func_)
                         file.write(f'error{type(e).__name__}\n')
-                if not filename :
+                        file.write(f'{start_of_func_}')
+                        file.write(f'{end_of_func_}')
+                if not filename:
                     print(f'error {type(e).__name__}')
                     print(start_of_func_)
+                    print(end_of_func_)
                     res=None
                     return res
 
@@ -41,7 +49,7 @@ def functt(a):
     """ Функци """
 
     for i in range(a):
-        print(a+c)
+        print(a)
     return a
 
 functt(50)
