@@ -15,8 +15,6 @@ def log(filename:Optional[str] = None):
                 res = func(*args,**kwargs)
                 end_of_func = datetime.now()
                 end_of_func_ = end_of_func.strftime('%Y-%m-%d %H:%M:%S:%f\n')
-                print(end_of_func_)
-                #res = func(*args,**kwargs)
                 if filename:
                      with open('logs.txt','a',encoding='utf-8') as file:
                          file.write(f'{func.__name__} ok\n')
