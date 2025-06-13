@@ -1,8 +1,9 @@
 from datetime import datetime
 from functools import wraps
+from typing import Optional
 
 
-def log(filename:[str] = None):
+def log(filename:Optional[str] = None):
 
     """   Функция декоратор с параметрами   """
     def decor(func):
@@ -17,14 +18,13 @@ def log(filename:[str] = None):
                 if filename :
                      with open('logs.txt','a',encoding='utf-8') as file:
                          file.write(f'{func.__name__} ok\n')
-                         file.write(f'{type(e).__name__}\n')
-                         file.write(f'{start_of_funct_}')
+                         file.write(f'{start_of_func_}')
                          file.write(f'{end_of_func_}')
                 if not filename:
                     print(f'{func.__name__} ok\n')
                     print(start_of_func_)
                     print(end_of_func_)
-                return res
+                    return res
             except Exception as e:
                 if filename:
                     with open('logs.txt', 'a', encoding='utf-8') as file:
@@ -36,7 +36,6 @@ def log(filename:[str] = None):
                     print(f'{func.__name__}')
                     print(f'error {type(e).__name__}\n')
                     print(start_of_func_)
-                    print(end_of_func_)
                     res = None
                     return res
 
@@ -52,7 +51,7 @@ def functt(a):
     """ Функци """
 
     for i in range(a):
-        print(a+c)
-    return a
+        print(a)
+        return a
 
 functt(50)
