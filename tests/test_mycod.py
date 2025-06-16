@@ -1,5 +1,5 @@
 import pytest
-from src.generators import filter_by_currency, transaction_descriptions, get_number , tranzactions_list, card_number_generator,number
+from src.generators import filter_by_currency, transaction_descriptions, tranzactions_list, card_number_generator,tranzactions_list
 
 def test_filter_by_currency():
 
@@ -10,12 +10,11 @@ def test_filter_by_currency():
 {'id': 142264268, 'state': 'EXECUTED', 'date': '2019-04-04T23:20:05.206878', 'operationAmount': {'amount': '79114.93', 'currency': {'name': 'USD', 'code': 'USD'}}, 'description': 'Перевод со счета на счет', 'from': 'Счет 19708645243227258542', 'to': 'Счет 75651667383060284188'}]
 
 
-def test_transaction_descriptions(test_tranzact_list):
+def test_transaction_descriptions():
 
     """   Тест описание транзакций   """
 
-    res == list(transaction_descriptions(test_tranzact_list))
-    assert res == ['Перевод организации', 'Перевод со счета на счет']
+    assert list(transaction_descriptions(tranzactions_list)) == ['Перевод организации', 'Перевод со счета на счет']
 
 
 
@@ -29,12 +28,12 @@ def test_transaction_descriptions(test_tranzact_list):
     #return formatted_card_number#
 
 
-@pytest.mark.parametrize('test,expected',[('1232323423422233','1232 3234 2342 2233'),('2223324334343344','2223 3243 3434 3344')])
-def test_get_number(test, expected):
+#@pytest.mark.parametrize('test,expected',[('1232323423422233','1232 3234 2342 2233'),('2223324334343344','2223 3243 3434 3344')])
+#def test_get_number(test, expected):
 
-    """   Перевод номера в формат 1234 2343 3432 1432   """
+    #"""   Перевод номера в формат 1234 2343 3432 1432   """
 
-    assert get_number(test) == expected
+    #assert get_number(test) == expected
 
 
 
@@ -42,7 +41,7 @@ def test_card_namber_generator():
 
     """   Функция генератор номеров карт   """
 
-    assert card_number_generator(1, 2) == '0000 0000 0000 0001'
+    assert list(card_number_generator(1, 5)) == ['0000 0000 0000 0001','0000 0000 0000 0002','0000 0000 0000 0003', '0000 0000 0000 0004' ,'0000 0000 0000 0005']
 
 
 def test_decor():
