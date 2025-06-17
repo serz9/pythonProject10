@@ -8,7 +8,7 @@ from typing import Optional
 
 def log(filename:Optional[str]):
 
-   """   Декоратор фиксирует роботу функции  консоль или в файл log.txt   """
+    """   Декоратор фиксирует роботу функции  консоль или в файл log.txt   """
     def decor(func):
         @wraps(func)
         def wrapp(*args,**kwargs):
@@ -55,8 +55,8 @@ def functt(a):
     """ Функции """
 
     for i in range(a):
-        print(a+c)
-        return a
+        print(a)
+    return a
 
 functt(50)
 
