@@ -1,5 +1,9 @@
 import pytest
 from src.generators import filter_by_currency, transaction_descriptions, tranzactions_list, card_number_generator,tranzactions_list
+import tempfile
+import os
+from src.decorators import log, functt
+
 
 def test_filter_by_currency():
 
@@ -43,7 +47,6 @@ def test_card_namber_generator():
 
     assert list(card_number_generator(1, 5)) == ['0000 0000 0000 0001','0000 0000 0000 0002','0000 0000 0000 0003', '0000 0000 0000 0004' ,'0000 0000 0000 0005']
 
-
 def test_decor():
     with pytest.raises(NameError) as func_errors:
         func(5,3)
@@ -57,5 +60,29 @@ def test_decorators(capsys):
 
 
 
+#from decorators import log, functt  # Импортируй свой декоратор и тестируемую функцию
+
+# Создаём временный файл для логов
+#log_file = 'log.txt'
+
+
+#log_file = tempfile.NamedTemporaryFile(delete=False).name
+log_file = 'logs.txt'
+@log(filename=log_file)
+def functt(arg):
+    return arg
+
+@pytest.mark.parametrize("arg", [10])
+def test_log_file(arg):
+    # Вызываем тестовую функцию
+    functt(arg)
+
+    # Проверяем содержимое логов
+    with open(log_file, 'r', encoding='utf-8') as f:
+        logs = f.read()
+        assert "functt ok" in logs
+
+
+    os.remove(log_file)
 
 
