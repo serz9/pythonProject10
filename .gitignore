@@ -3,3 +3,5 @@ venv
 __pycahce__/
 .idea/
 *.pyc
+.env
+
