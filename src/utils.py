@@ -9,7 +9,7 @@ print(dt)
 def jsn_date(path_)  :
     date_path = path_
 
-    with open(date_path,'r') as file :
+    with open(date_path,'r') as file:
 
         if not os.path.isfile(date_path):
             return []
