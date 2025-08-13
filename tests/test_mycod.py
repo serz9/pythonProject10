@@ -67,6 +67,9 @@ def test_decorators(capsys):
 
 
 #log_file = tempfile.NamedTemporaryFile(delete=False).name
+
+
+
 log_file = 'logs.txt'
 @log(filename=log_file)
 def functt(arg):
