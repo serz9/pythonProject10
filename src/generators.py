@@ -22,8 +22,8 @@ tranzactions_list = [
             "operationAmount": {
                 "amount": "79114.93",
                 "currency": {
-                    "name": 'USD',
-                    "code": "USD"
+                    "name": 'RUB',
+                    "code": "RUB"
                 }
             },
             "description": "Перевод со счета на счет",

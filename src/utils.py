@@ -1,9 +1,9 @@
 import os.path
 import json
-from selenium import webdriver
+#from selenium import webdriver
 from dotenv import load_dotenv
-import pyaudio
-import speech_recognition as sr
+#import pyaudio
+#import speech_recognition as sr
 
 #r=sr.Recognizer()
 #with sr.Microphone() as mc:
@@ -37,6 +37,8 @@ dt=os.getcwd()
 #print(cc)
 print(dt)
 def jsn_date(path_)  :
+
+
     date_path = path_
     data=[]
     try:
@@ -63,7 +65,6 @@ def jsn_date(path_)  :
         print(f'ошибка {e}')
 
 
-
-
-
 jsn_date('C:/Users/serzh/PycharmProjects/pythonProject10/date/operations.json')
+
+
