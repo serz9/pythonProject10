@@ -9,31 +9,6 @@ load_dotenv()
 API_KEY = os.getenv('API_KEY')
 BASE_URL = os.getenv('BASE_URL')
 
-#logging.basicConfig(filename ='external_api',
-                   # level = logging.INFO,
-                   # format = '%(asctime)s %(level)s :%(massege)s',
-                   #filemode ='w')
-
-#my_logger = logging.getLogger(__name__)
-#my_logger.setLevel(logging.INFO)
-#my_consol_handler = logging.StreamHandler()
-#my_consol_formatter = logging.Formatter('%(asctime)s %(level name)s: %(message)s')
-#my_logger.addHandler(my_consol_handler)
-#my_file_handler = logging.FileHandler(filename='external_api.logs',mode = 'w',encoding='utf-8')
-#my_logger.addHandler(my_file_handler)
-#my_file_formatter = logging.Formatter('%(asctime)s %(level name)s: %(message)s')
-#my_logger.addHandler(my_file_handler)
-#my_file_handler.setFormatter(my_file_formatter)
-
-#logging.debug('выполнение программы')
-#logging.info('важная информация')
-#logging.warning('внимание')
-#logging.error('произошла ошибка')
-#logging.critical('критический уровень опасности')
-#my_logger =logging.getLogger(__name__)
-
-#API_KEY = os.getenv('API_KEY')
-#BASE_URL = os.getenv('BASE_URL')
 
 logging.basicConfig(
     level=logging.INFO,

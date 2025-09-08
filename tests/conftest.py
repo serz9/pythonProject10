@@ -40,3 +40,14 @@ def test_tranzact_list():
 @pytest.fixture
 def arg():
     return 10
+
+@pytest.fixture
+def mock_api_responce():
+    return {
+        "rates":{
+            "USD":75.5,
+            "EUR":85.5
+        }
+
+    }
+

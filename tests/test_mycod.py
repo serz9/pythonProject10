@@ -3,6 +3,8 @@ from src.generators import filter_by_currency, transaction_descriptions, tranzac
 import tempfile
 import os
 from src.decorators import log, functt
+from unittest.mock import patch
+from requests.exceptions import HTTPError
 
 
 def test_filter_by_currency():
@@ -48,11 +50,17 @@ def test_card_namber_generator():
     assert list(card_number_generator(1, 5)) == ['0000 0000 0000 0001','0000 0000 0000 0002','0000 0000 0000 0003', '0000 0000 0000 0004' ,'0000 0000 0000 0005']
 
 def test_decor():
+
+    """   Тестируем декоратор   """
+
     with pytest.raises(NameError) as func_errors:
         func(5,3)
         assert func_errors.value == NameError
 
 def test_decorators(capsys):
+
+     """  Тестируем декоратор   """
+
      print('functt ok')
      captured = capsys.readouterr()
      assert captured.out == 'functt ok\n'
@@ -77,10 +85,10 @@ def functt(arg):
 
 @pytest.mark.parametrize("arg", [10])
 def test_log_file(arg):
-    # Вызываем тестовую функцию
+
     functt(arg)
 
-    # Проверяем содержимое логов
+
     with open(log_file, 'r', encoding='utf-8') as f:
         logs = f.read()
         assert "functt ok" in logs
@@ -88,4 +96,71 @@ def test_log_file(arg):
 
     os.remove(log_file)
 
+
+def test_convert_transaction_rub():
+    transaction = {
+        'operationAmount': {
+            'amount': '100.50',
+            'currency': {
+                'code': 'RUB'
+            }
+        }
+    }
+    result = convert_transaction(transaction)
+    assert result == 100.50
+
+
+@patch('requests.get')
+def test_convert_transaction_usd(mock_get, mock_api_response):
+    mock_get.return_value.json.return_value = mock_api_response
+    transaction = {
+        'operationAmount': {
+            'amount': '100.50',
+            'currency': {
+                'code': 'USD'
+            }
+        }
+    }
+    result = convert_transaction(transaction)
+    assert result == pytest.approx(7537.5)
+
+@patch('requests.get')
+
+def test_get_exchange_rate_success(mock_get, mock_api_response):
+
+    """   Тесты для полученя курса валют   """
+
+    mock_get.return_value.json.return_value = mock_api_response
+    rate = get_exchange_rate('USD')
+    assert rate == 75.0
+
+@patch('requests.get')
+def test_get_exchange_rate_error(mock_get):
+    mock_get.side_effect = HTTPError('API error')
+    rate = get_exchange_rate('USD')
+    assert rate is None
+
+def test_env_variables():
+
+    """"  Тест на загрузку переменных окружения   """
+
+    assert os.getenv('API_KEY') is not None
+    assert os.getenv('BASE_URL') is not None
+
+
+def test_convert_transaction_invalid_data():
+
+    """   Тест на правильность ввведенных  данных   """
+
+
+    invalid_transaction = {
+        'operationAmount': {
+            'amount': 'abc',
+            'currency': {
+                'code': 'RUB'
+            }
+        }
+    }
+    result = convert_transaction(invalid_transaction)
+    assert result is None
 
