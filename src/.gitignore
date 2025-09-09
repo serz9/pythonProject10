@@ -4,4 +4,6 @@
   *.pyc
   *.log
   .env
+  .mypy_cache
+
 
