@@ -1,43 +1,11 @@
 import os.path
 import json
-#from selenium import webdriver
 from dotenv import load_dotenv
-#import pyaudio
-#import speech_recognition as sr
 
-#r=sr.Recognizer()
-#with sr.Microphone() as mc:
-   # audio=r.listen(mc)
-   # text=r.recognize_google(audio,language='ru-RU')
-
-#print(text)
-import pyttsx3
 load_dotenv()
-#cr=webdriver.Chrome()
-#cr.get('https://ananas-72.ru')
-y=os.path.join(os.getcwd(),'data','operations.json')
-a=''
-
-with open('C:\\Users\\serzh\\PycharmProjects\\pythonProject10\\operations',encoding='utf-8') as file:
-     for i in file:
-         a=a+i
-
-audio=pyttsx3.init()
-audio.say(a)
-audio.runAndWait()
-
-
-
-
-aa=os.path.abspath(__file__)
-print(aa)
-#bb=os.listdir(r'C:\\Users\\serzh\\PycharmProjects\\pythonProject10\\date\\operations.json')
-##cc=os.listdir(r'C:\\Users\\serzh\\PycharmProjects\\pythonProject10\\src\\utils.py')
-dt=os.getcwd()
-#print(cc)
-print(dt)
 def jsn_date(path_)  :
 
+    """   Функция проверки данных   """
 
     date_path = path_
     data=[]
@@ -65,6 +33,6 @@ def jsn_date(path_)  :
         print(f'ошибка {e}')
 
 
-jsn_date('C:/Users/serzh/PycharmProjects/pythonProject10/date/operations.json')
+jsn_date(r'C:/Users/serzh/PycharmProjects/pythonProject10/date/operations.json')
 
 
