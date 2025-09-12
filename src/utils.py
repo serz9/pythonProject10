@@ -11,20 +11,18 @@ def jsn_date(path_)  :
     data=[]
     try:
         if not os.path.isfile(date_path):
-            print(data)
             return data
         else:
             with open(date_path,'r',encoding='utf-8') as file:
-                data_=json.load(file)
-                print(data_)
+                data_ = json.load(file)
 
-            if isinstance(data_,list):
+            if isinstance(data_, list):
                 print('данные являются списком')
                 if all(isinstance(item, dict) for item in data_):
                     print('файл является списком словарей ')
                 else:
                     return data
-            if len(data_)==0:
+            if len(data_) == 0:
                 print(data)
                 return(data)
 
