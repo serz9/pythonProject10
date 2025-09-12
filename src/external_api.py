@@ -31,7 +31,6 @@ def convert_transaction(transaction):
         currency_code = transaction['operationAmount']['currency']['code']
 
         if currency_code == "RUB":
-            print(amount)
             return amount
 
         rate = get_exchange_rate(currency_code)
