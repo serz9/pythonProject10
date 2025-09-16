@@ -1,9 +1,8 @@
 import pytest
 
-
 @pytest.fixture
 def test_tranzact_list():
-    return  [
+    return [
           {
          "id": 939719570,
          "state": "EXECUTED",
@@ -34,7 +33,8 @@ def test_tranzact_list():
             "description": "Перевод со счета на счет",
             "from": "Счет 19708645243227258542",
             "to": "Счет 75651667383060284188"
-         }]
+         }
+    ]
 
 
 @pytest.fixture
@@ -42,12 +42,13 @@ def arg():
     return 10
 
 @pytest.fixture
-def mock_api_responce():
+def mock_api_response():
     return {
-        "rates":{
-            "USD":75.5,
-            "EUR":85.5
+        "rates" : {
+            "USD": "75.5",
+            "currency":{
+            "code":"USD"
         }
-
+      }
     }
 

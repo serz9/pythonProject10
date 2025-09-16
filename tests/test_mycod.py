@@ -1,6 +1,6 @@
 import pytest
-from src.generators import filter_by_currency, transaction_descriptions, tranzactions_list, card_number_generator,tranzactions_list
-import tempfile
+from src.generators import filter_by_currency, transaction_descriptions, tranzactions_list, card_number_generator
+from src.external_api.py import convert_transaction, get_exchange_rate
 import os
 from src.decorators import log, functt
 from unittest.mock import patch
@@ -114,10 +114,10 @@ def test_convert_transaction_rub():
 def test_convert_transaction_usd(mock_get, mock_api_response):
     mock_get.return_value.json.return_value = mock_api_response
     transaction = {
-        'operationAmount': {
-            'amount': '100.50',
-            'currency': {
-                'code': 'USD'
+    "operationAmount": {
+            "amount": "100.50",
+            "currency": {
+            "code": 'USD'
             }
         }
     }
@@ -161,6 +161,7 @@ def test_convert_transaction_invalid_data():
             }
         }
     }
+
     result = convert_transaction(invalid_transaction)
     assert result is None
 

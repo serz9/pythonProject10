@@ -23,8 +23,10 @@ logging.basicConfig(
 my_logger = logging.getLogger(__name__)
 
 def convert_transaction(transaction):
+
     """
     Возвращает результат транзакции в рублях
+
     """
     try:
         amount = float(transaction['operationAmount']['amount'])
@@ -32,12 +34,12 @@ def convert_transaction(transaction):
 
         if currency_code == "RUB":
             return amount
+        else:
+            rate = get_exchange_rate(currency_code)
 
-        rate = get_exchange_rate(currency_code)
         if rate is None:
             raise ValueError('Не удалось получить курс валют')
 
-        rub_amount = amount * rate
         return round(rub_amount, 2)
 
     except Exception as e:
@@ -52,15 +54,15 @@ def get_exchange_rate(currency) :
         headers = {'apikey': API_KEY}
 
         params = {
-               'symbols': currency,
-               'base' :'RUB'
+               'symbols':'RUB',
+               'base' :'currency'
 
         }
-        response = requests.get(BASE_URL,params=params,headers=headers)
+        response = requests.get('https://apilayer.com/marketplace/exchangerates_data/latest',params=params,headers=headers)
         response.raise_for_status()
         data = response.json()
 
-        return data['rates']['currency']
+        return data['rates']['RUB']
 
     except Exception as e:
         my_logger.error(f'ошибка {str(e)}')
