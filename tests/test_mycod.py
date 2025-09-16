@@ -1,6 +1,6 @@
 import pytest
 from src.generators import filter_by_currency, transaction_descriptions, tranzactions_list, card_number_generator
-from src.external_api.py import convert_transaction, get_exchange_rate
+from src.external_api import convert_transaction, get_exchange_rate
 import os
 from src.decorators import log, functt
 from unittest.mock import patch
