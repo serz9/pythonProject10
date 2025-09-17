@@ -39,6 +39,7 @@ def convert_transaction(transaction):
 
         if rate is None:
             raise ValueError('Не удалось получить курс валют')
+        rub_amount = amount*rate
 
         return round(rub_amount, 2)
 

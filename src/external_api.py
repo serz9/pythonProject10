@@ -14,6 +14,9 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s %(levelname)s: %(message)s',
     handlers=[
+
+
+
         logging.FileHandler('../logs/external_api.log'),
         logging.StreamHandler()
     ],
@@ -39,6 +42,7 @@ def convert_transaction(transaction):
 
         if rate is None:
             raise ValueError('Не удалось получить курс валют')
+        rub_amount = amount*rate
 
         return round(rub_amount, 2)
 
