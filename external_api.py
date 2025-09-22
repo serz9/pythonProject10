@@ -2,22 +2,22 @@ import os
 import requests
 from dotenv import load_dotenv
 import logging
-
-
+aa = os.getcwd()
+print(aa)
 load_dotenv()
 
 sAPI_KEY = os.getenv('API_KEY')
 BASE_URL = os.getenv('BASE_URL')
 
-
 logging.basicConfig(
+
     level=logging.INFO,
     format='%(asctime)s %(levelname)s: %(message)s',
     handlers=[
 
 
 
-        logging.FileHandler('../logs/external_api.log'),
+        logging.FileHandler('logs/external_api.log'),
         logging.StreamHandler()
     ],
     encoding='utf-8'
@@ -59,7 +59,7 @@ def get_exchange_rate(currency) :
 
         params = {
                'symbols':'RUB',
-               'base' :'currency'
+               'base':'currency'
 
         }
         response = requests.get('https://apilayer.com/marketplace/exchangerates_data/latest',params=params,headers=headers)

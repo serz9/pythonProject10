@@ -46,7 +46,7 @@ def mock_api_response():
     return {
         "rates" : {
             "USD": "75.5",
-            "currency":{
+            "currency": {
             "code":"USD"
         }
       }

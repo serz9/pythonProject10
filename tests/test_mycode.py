@@ -1,12 +1,12 @@
 import pytest
 from src.generators import filter_by_currency, transaction_descriptions, tranzactions_list, card_number_generator
-from src.external_api.py import (convert_transaction, get_exchange_rate)
+from external_api import convert_transaction, get_exchange_rate
 import os
 from src.decorators import log, functt
 from unittest.mock import patch
 from requests.exceptions import HTTPError
 
-a=getcwd()
+a=os.getcwd()
 print(a)
 
 def test_filter_by_currency():

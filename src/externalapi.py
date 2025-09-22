@@ -3,7 +3,8 @@ import requests
 from dotenv import load_dotenv
 import logging
 
-
+a = os.getcwd()
+print(a)
 load_dotenv()
 
 API_KEY = os.getenv('API_KEY')
