@@ -47,8 +47,8 @@ def convert_transaction(transaction):
         return round(rub_amount, 2)
 
     except Exception as e:
-        logging.error(f'Непредвиденная ошибка: {e}')
-        return None
+        logging.error(f'Непредвиденная ошибка:{e}')
+    return None
 
 
 def get_exchange_rate(currency) :

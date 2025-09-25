@@ -1,9 +1,10 @@
 import pytest
-
+from  unittest.mock import Mock,patch
 @pytest.fixture
 def test_tranzact_list():
-    return [
-          {
+
+
+    {
          "id": 939719570,
          "state": "EXECUTED",
          "date": "2018-06-30T02:08:58.425572",
@@ -18,7 +19,7 @@ def test_tranzact_list():
              "from": "Счет 75106830613657916952",
              "to": "Счет 11776614605963066702"
         },
-        {
+    {
             "id": 142264268,
             "state": "EXECUTED",
             "date": "2019-04-04T23:20:05.206878",
@@ -34,20 +35,22 @@ def test_tranzact_list():
             "from": "Счет 19708645243227258542",
             "to": "Счет 75651667383060284188"
          }
-    ]
+
 
 
 @pytest.fixture
 def arg():
     return 10
 
+
+
 @pytest.fixture
 def mock_api_response():
     return {
         "rates" : {
-            "USD": "75.5",
+            "amount": "75.5",
             "currency": {
-            "code":"USD"
+            "code": "USD"
         }
       }
     }

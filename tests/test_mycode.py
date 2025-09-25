@@ -159,10 +159,10 @@ def test_convert_transaction_invalid_data():
 
 
     invalid_transaction = {
-        'operationAmount': {
-            'amount': 'abc',
-            'currency': {
-                'code': 'RUB'
+        "operationAmount": {
+            "amount": "abc",
+            "currency": {
+                "code": "RUB"
             }
         }
     }
