@@ -2,11 +2,16 @@ import os
 import requests
 from dotenv import load_dotenv
 import logging
+import logging.config
 aa = os.getcwd()
 print(aa)
 load_dotenv()
 
-sAPI_KEY = os.getenv('API_KEY')
+API_KEY = os.getenv('API_KEY')
+if not API_KEY:
+    raise ValueError("API_KEY не найден в переменых окружения")
+
+
 BASE_URL = os.getenv('BASE_URL')
 
 logging.basicConfig(
@@ -55,18 +60,23 @@ def get_exchange_rate(currency) :
 
 
     try:
-        headers = {'apikey': API_KEY}
+        headers = {'api-key': API_KEY}
 
         params = {
                'symbols':'RUB',
-               'base':'currency'
+               'base':currency
 
         }
         response = requests.get('https://apilayer.com/marketplace/exchangerates_data/latest',params=params,headers=headers)
         response.raise_for_status()
         data = response.json()
 
-        return data['rates']['RUB']
+        if 'rates' in data and 'RUB' in data['rates']:
+            return data['rates']['RUB']
+        else:
+            raise ValueError("Неверный формат ответа от API")
+
+
 
     except Exception as e:
         my_logger.error(f'ошибка {str(e)}')
