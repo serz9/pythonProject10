@@ -1,0 +1,72 @@
+2025-09-06 04:16:02,401 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: Expecting value: line 1 column 1 (char 0)
+2025-09-06 04:16:02,404 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+2025-09-06 04:18:25,309 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: Expecting value: line 1 column 1 (char 0)
+2025-09-06 04:18:25,310 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+2025-09-06 04:23:31,275 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: Expecting value: line 1 column 1 (char 0)
+2025-09-06 04:25:23,117 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: 403 Client Error: Forbidden for url: https://apilayer.com/exchangerates_data-api?access_key=5jAMHCjMxaZhe2doGTdmernBA1oGwWar&symbols=name&symbols=code&base=RUB
+2025-09-06 04:26:20,631 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: 403 Client Error: Forbidden for url: https://apilayer.com/exchangerates_data-api?access_key=5jAMHCjMxaZhe2doGTdmernBA1oGwWar&symbols=code&base=RUB
+2025-09-06 04:29:28,160 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: 403 Client Error: Forbidden for url: https://apilayer.com/exchangerates_data-api?access_key=5jAMHCjMxaZhe2doGTdmernBA1oGwWar&symbols=code&base=RUB
+2025-09-06 04:34:41,409 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: 404 Client Error: Not Found for url: https://apilayer.com/exchangerates_data-api?symbols=currency&base=RUB
+2025-09-06 04:35:40,332 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: 404 Client Error: Not Found for url: https://apilayer.com/exchangerates_data-api?symbols=currency&base=RUB
+2025-09-06 04:40:45,988 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: 404 Client Error: Not Found for url: https://apilayer.com/exchangerates_data-api?symbols=currency&base=RUB
+2025-09-07 01:14:17,642 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: 404 Client Error: Not Found for url: https://apilayer.com/exchangerates_data-api?symbols=currency&base=RUB
+2025-09-07 01:16:50,657 ERROR: РћС€РёР±РєР° Р·Р°РїСЂРѕСЃР°: 404 Client Error: Not Found for url: https://apilayer.com/exchangerates_data-api?symbols=currency&base=RUB
+2025-09-07 01:19:35,003 ERROR: РћС€РёР±РєР° Р·Р°РїСЂРѕСЃР°: 404 Client Error: Not Found for url: https://apilayer.com/exchangerates_data-api?symbols=currency&base=RUB
+2025-09-07 01:26:09,343 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: 404 Client Error: Not Found for url: https://apilayer.com/exchangerates_data-api?symbols=currency&base=RUB
+2025-09-07 01:37:13,932 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: 404 Client Error: Not Found for url: https://apilayer.com/exchangerates_data-api?symbols=currency&base=RUB
+2025-09-07 01:38:33,295 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: 404 Client Error: Not Found for url: https://apilayer.com/exchangerates_data-api?symbols=currency&base=RUB
+2025-09-07 01:40:45,236 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: 404 Client Error: Not Found for url: https://apilayer.com/exchangerates_data-api?symbols=currency&base=RUB
+2025-09-07 01:45:13,144 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: 404 Client Error: Not Found for url: https://apilayer.com/exchangerates_data-api?symbols=currency_&base=RUB
+2025-09-07 01:45:13,541 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: 404 Client Error: Not Found for url: https://apilayer.com/exchangerates_data-api?symbols=currency_&base=RUB
+2025-09-07 01:45:13,543 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+2025-09-07 01:59:15,248 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: 404 Client Error: Not Found for url: https://apilayer.com/exchangerates_data-api?symbols=currency_&base=RUB
+2025-09-07 01:59:15,724 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: 404 Client Error: Not Found for url: https://apilayer.com/exchangerates_data-api?symbols=currency_&base=RUB
+2025-09-07 01:59:15,725 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+2025-09-07 02:00:11,366 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: 404 Client Error: Not Found for url: https://apilayer.com/exchangerates_data-api?symbols=currency_&base=RUB
+2025-09-07 02:00:11,739 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: 404 Client Error: Not Found for url: https://apilayer.com/exchangerates_data-api?symbols=currency_&base=RUB
+2025-09-07 02:00:11,741 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+2025-09-07 02:02:57,354 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: 404 Client Error: Not Found for url: https://apilayer.com/exchangerates_data-api?symbols=currency_&base=RUB
+2025-09-07 02:16:57,705 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅname 'currency' is not defined
+2025-09-07 02:16:57,706 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅname 'currency' is not defined
+2025-09-07 02:16:57,707 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+2025-09-07 02:17:34,854 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅname 'currency' is not defined
+2025-09-07 02:17:34,854 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅname 'currency' is not defined
+2025-09-07 02:17:34,854 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+2025-09-07 02:18:17,627 ERROR:  пїЅпїЅпїЅпїЅпїЅпїЅname 'currency' is not defined
+2025-09-07 02:18:17,627 ERROR:  пїЅпїЅпїЅпїЅпїЅпїЅname 'currency' is not defined
+2025-09-07 02:18:17,627 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+2025-09-07 02:18:52,256 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ name 'currency' is not defined
+2025-09-07 02:18:52,256 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ name 'currency' is not defined
+2025-09-07 02:18:52,256 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+2025-09-07 02:23:20,618 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ name 'currency' is not defined
+2025-09-07 02:23:20,619 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ name 'currency' is not defined
+2025-09-07 02:23:20,619 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+2025-09-07 02:24:11,253 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-09-07 02:24:11,254 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-09-07 02:24:11,254 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+2025-09-07 02:31:10,161 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: list indices must be integers or slices, not str
+2025-09-07 02:31:32,891 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-09-07 02:31:32,891 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+2025-09-07 02:33:15,385 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-09-07 02:33:15,385 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+2025-09-07 02:34:53,755 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-09-07 02:34:53,755 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+2025-09-07 02:36:12,188 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ 404 Client Error: Not Found for url: https://apilayer.com/exchangerates_data-api?symbols=USD&base=RUB
+2025-09-07 02:36:12,190 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+2025-09-07 02:37:03,171 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ 404 Client Error: Not Found for url: https://apilayer.com/exchangerates_data-api?symbols=USD&base=RUB
+2025-09-07 02:37:03,173 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+2025-09-07 02:59:00,814 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ 404 Client Error: Not Found for url: https://apilayer.com/exchangerates_data-api?symbols=USD&base=RUB
+2025-09-07 02:59:00,815 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+2025-09-07 03:19:52,046 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ 404 Client Error: Not Found for url: https://apilayer.com/exchangerates_data-api?symbols=USD&base=RUB
+2025-09-07 03:19:52,049 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+2025-09-09 02:10:29,836 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ 404 Client Error: Not Found for url: https://apilayer.com/exchangerates_data-api?symbols=RUBA&base=RUB
+2025-09-09 02:10:29,838 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+2025-09-09 02:11:35,472 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ 404 Client Error: Not Found for url: https://apilayer.com/exchangerates_data-api?symbols=EUR&base=RUB
+2025-09-09 02:11:35,474 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+2025-09-09 02:11:59,317 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ 404 Client Error: Not Found for url: https://apilayer.com/exchangerates_data-api?symbols=EUR&base=RUB
+2025-09-09 02:11:59,318 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+
+
+
+2025-09-25 23:10:41,361 ERROR: ошибка HTTPSConnectionPool(host='apilayer.com', port=443): Max retries exceeded with url: /marketplace/exchangerates_data/latest?symbols=RUB&base=RU (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001E80FED9790>: Failed to resolve 'apilayer.com' ([Errno 11001] getaddrinfo failed)"))
+2025-09-25 23:10:41,363 ERROR: Непредвиденная ошибка:Не удалось получить курс валют
