@@ -4,7 +4,7 @@ from unittest.mock import patch, Mock
 def test_tranzact_list():
 
 
-    {
+   [{
          "id": 939719570,
          "state": "EXECUTED",
          "date": "2018-06-30T02:08:58.425572",
@@ -34,7 +34,9 @@ def test_tranzact_list():
             "description": "Перевод со счета на счет",
             "from": "Счет 19708645243227258542",
             "to": "Счет 75651667383060284188"
-         }
+         }]
+
+
 
 
 

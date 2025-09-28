@@ -3,11 +3,16 @@ import requests
 from dotenv import load_dotenv
 import logging
 import logging.config
+
+
+
+
 aa = os.getcwd()
 print(aa)
+
 load_dotenv()
 
-API_KEY = os.getenv('API_KEY')
+API_KEY =os.getenv('API_KEY')
 if not API_KEY:
     raise ValueError("API_KEY не найден в переменых окружения")
 
@@ -47,8 +52,9 @@ def convert_transaction(transaction):
 
         if rate is None:
             raise ValueError('Не удалось получить курс валют')
-        rub_amount = amount*rate
 
+        rub_amount = amount*rate
+        print(round(rub_amount,2))
         return round(rub_amount, 2)
 
     except Exception as e:
@@ -91,3 +97,10 @@ convert_transaction( {
             }
         }
     })
+
+
+
+
+
+
+

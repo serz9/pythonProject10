@@ -70,3 +70,11 @@
 
 2025-09-25 23:10:41,361 ERROR: ошибка HTTPSConnectionPool(host='apilayer.com', port=443): Max retries exceeded with url: /marketplace/exchangerates_data/latest?symbols=RUB&base=RU (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001E80FED9790>: Failed to resolve 'apilayer.com' ([Errno 11001] getaddrinfo failed)"))
 2025-09-25 23:10:41,363 ERROR: Непредвиденная ошибка:Не удалось получить курс валют
+2025-09-27 23:35:59,781 ERROR: ошибка HTTPSConnectionPool(host='apilayer.com', port=443): Max retries exceeded with url: /marketplace/exchangerates_data/latest?symbols=RUB&base=RU (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000220FC1C9790>: Failed to resolve 'apilayer.com' ([Errno 11001] getaddrinfo failed)"))
+2025-09-27 23:35:59,782 ERROR: Непредвиденная ошибка:Не удалось получить курс валют
+2025-09-27 23:44:48,577 ERROR: ошибка ('Connection aborted.', ConnectionResetError(10054, 'Удаленный хост принудительно разорвал существующее подключение', None, 10054, None))
+2025-09-27 23:44:48,578 ERROR: Непредвиденная ошибка:Не удалось получить курс валют
+2025-09-27 23:48:01,003 ERROR: ошибка ('Connection aborted.', ConnectionResetError(10054, 'Удаленный хост принудительно разорвал существующее подключение', None, 10054, None))
+2025-09-27 23:48:01,004 ERROR: Непредвиденная ошибка:Не удалось получить курс валют
+2025-09-28 09:00:13,883 ERROR: ошибка 404 Client Error: Not Found for url: https://apilayer.com/marketplace/exchangerates_data/latest?symbols=RUB&base=EUR
+2025-09-28 09:00:13,891 ERROR: Непредвиденная ошибка:Не удалось получить курс валют
