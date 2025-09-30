@@ -78,3 +78,5 @@
 2025-09-27 23:48:01,004 ERROR: Непредвиденная ошибка:Не удалось получить курс валют
 2025-09-28 09:00:13,883 ERROR: ошибка 404 Client Error: Not Found for url: https://apilayer.com/marketplace/exchangerates_data/latest?symbols=RUB&base=EUR
 2025-09-28 09:00:13,891 ERROR: Непредвиденная ошибка:Не удалось получить курс валют
+2025-09-29 22:38:04,313 ERROR: ошибка 404 Client Error: Not Found for url: https://apilayer.com/marketplace/exchangerates_data/latest?symbols=RUB&base=EUR
+2025-09-29 22:38:04,319 ERROR: Непредвиденная ошибка:Не удалось получить курс валют

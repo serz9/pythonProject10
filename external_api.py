@@ -87,13 +87,13 @@ def get_exchange_rate(currency) :
     except Exception as e:
         my_logger.error(f'ошибка {str(e)}')
 
+if __name__ ==' __main__ ':
 
-
-convert_transaction( {
+    convert_transaction( {
         'operationAmount': {
             'amount': '100.50',
             'currency': {
-                'code': 'RUB'
+                'code': 'EUR'
             }
         }
     })
