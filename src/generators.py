@@ -37,8 +37,7 @@ def filter_by_currency(tranzactions_list: list[str], currency: [str]):
     """   Функция фильтрации   """
 
     res = (i for i in tranzactions_list if i['operationAmount']['currency']['code'] == currency)
-    for i in res:
-        yield i
+    return res
 
 
 filter_run = filter_by_currency(tranzactions_list, 'USD')
