@@ -5,11 +5,6 @@ import logging
 import logging.config
 
 
-
-
-aa = os.getcwd()
-print(aa)
-
 load_dotenv()
 
 API_KEY =os.getenv('API_KEY')
@@ -27,7 +22,7 @@ logging.basicConfig(
 
 
 
-        logging.FileHandler('logs/external_api.log'),
+        logging.FileHandler('../logs/external_api.log'),
         logging.StreamHandler()
     ],
     encoding='utf-8'

@@ -1,6 +1,6 @@
 import pytest
 from src.generators import filter_by_currency, transaction_descriptions, tranzactions_list, card_number_generator
-from external_api import convert_transaction, get_exchange_rate
+from src.external_api import convert_transaction, get_exchange_rate
 import os
 from src.decorators import log, functt
 from unittest.mock import patch
@@ -65,17 +65,6 @@ def test_decorators(capsys):
      print('functt ok')
      captured = capsys.readouterr()
      assert captured.out == 'functt ok\n'
-
-
-
-
-#from decorators import log, functt  # Импортируй свой декоратор и тестируемую функцию
-
-# Создаём временный файл для логов
-#log_file = 'log.txt'
-
-
-#log_file = tempfile.NamedTemporaryFile(delete=False).name
 
 
 

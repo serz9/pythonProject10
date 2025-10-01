@@ -1,10 +1,8 @@
 import pytest
-from unittest.mock import patch, Mock
+from unittest.mock import patch, MagicMock
 @pytest.fixture
 def test_tranzact_list():
-
-
-   [{
+  return [{
          "id": 939719570,
          "state": "EXECUTED",
          "date": "2018-06-30T02:08:58.425572",
@@ -34,7 +32,8 @@ def test_tranzact_list():
             "description": "Перевод со счета на счет",
             "from": "Счет 19708645243227258542",
             "to": "Счет 75651667383060284188"
-         }]
+         }
+         ]
 
 
 
@@ -70,36 +69,6 @@ def mock_api_response():
         "base": "USD",
         "date": "2023-10-01"
     }
-
-
-@patch('requests.get')  # Патчим requests.get
-def test_convert_transaction_usd(mock_get, mock_api_response):
-    # Создаем мок-ответ для requests.get
-    mock_response = Mock()
-    mock_response.status_code = 200  # Устанавливаем статус ответа
-    mock_response.json.return_value = mock_api_response  # Задаем JSON-ответ
-
-    # Настраиваем мок так, чтобы при вызове requests.get возвращался наш мок-ответ
-    mock_get.return_value = mock_response
-
-    # Создаем тестовую транзакцию
-    transaction = {
-        "operationAmount": {
-            "amount": "100.50",
-            "currency": {
-                "code": 'USD'
-            }
-        }
-    }
-
-    # Вызываем тестируемую функцию
-    result = convert_transaction(transaction)
-
-    # Проверяем результат конвертации
-    assert result == pytest.approx(7537.5)  # 100.50 * 75.0 = 7537.5
-
-    mock_get.assert_called_once()  # Проверяем, что метод вызывался один раз
-
 @pytest.fixture(autouse=True)
 def setup_env(monkeypatch):
     monkeypatch.setenv('API_KEY', 'test_api_key')
