@@ -15,7 +15,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s %(levelname)s: %(message)s',
     handlers=[
-        logging.FileHandler('../logs/external_api.log'),
+        logging.FileHandler('../logs/external_api.logs'),
         logging.StreamHandler()
     ],
     encoding='utf-8'
