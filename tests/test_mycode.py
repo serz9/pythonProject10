@@ -7,6 +7,7 @@ from unittest.mock import patch
 from requests.exceptions import HTTPError
 
 
+
 def test_filter_by_currency():
 
     """  Тест фильтрации данных  """
