@@ -13,8 +13,7 @@ def test_filter_by_currency():
 
 
         res_ = filter_by_currency(tranzactions_list,'USD')
-        assert list(res_) == [
-        {
+        assert list(res_) == [{
             "id": 939719570,
             "state": "EXECUTED",
             "date": "2018-06-30T02:08:58.425572",
