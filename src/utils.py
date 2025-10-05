@@ -32,7 +32,7 @@ def jsn_date(path_)  :
     except Exception as e :
         print(f'ошибка {e}')
 
-if  __name__ == '__maine__':
+if  __name__ == '__main__':
 
     jsn_date(r'C:/Users/serzh/PycharmProjects/pythonProject10/date/operations.json')
 
