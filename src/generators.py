@@ -61,28 +61,6 @@ for n in tranzactions_list:
     print(next(res_))
 
 
-#def get_number(number):
-
-    #"""   Функция  преобразует номера карт в формат 3432 3432 4343 4564   """
-
-    #card_number = str(number).zfill(16)
-    #global formatted_card_number
-    #formatted_card_number = ' '.join([card_number[i:i+4] for i in range(0, 16, 4)])
-    #print(formatted_card_number)
-    #yield formatted_card_number
-
-#def card_number_generator(start, end):
-
-   # """   Функция генератор номеров карт   """
-
-    #global number
-    #for j in range(start, end + 1):
-        #count_0 = "0" * (16 - len(str(j)))
-        #number = count_0 + str(j)
-        #next(get_number(number))
-
-
-#card_number_generator(123,125)
 def card_number_generator(start,end):
 
     """   Функция  преобразует номера карт в формат 0000 0000 0043 4564   """
@@ -91,8 +69,6 @@ def card_number_generator(start,end):
         card_number = str(number).zfill(16)
         formatted_card_number = ' '.join([card_number[i:i+4] for i in range(0, 16, 4)])
         yield formatted_card_number
-
-#res = card_number_generator(1,5)
 
 all_numbers = card_number_generator(1,5)
 

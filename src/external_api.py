@@ -46,12 +46,13 @@ def convert_transaction(transaction):
             return amount
         else:
             rate = get_exchange_rate(currency_code)
+            #print(rate)
 
         if rate is None:
             raise ValueError('Не удалось получить курс валют')
 
         rub_amount = amount*rate
-        print(round(rub_amount,2))
+        #print(round(rub_amount,2))
         return round(rub_amount, 2)
 
     except Exception as e:
@@ -63,18 +64,19 @@ def get_exchange_rate(currency) :
 
 
     try:
-        headers = {'api-key': API_KEY}
+        headers = {'apikey': API_KEY}
 
         params = {
                'symbols':'RUB',
                'base':currency
 
         }
-        response = requests.get('https://apilayer.com/marketplace/exchangerates_data/latest',params=params,headers=headers)
+        response = requests.get('https://api.apilayer.com/exchangerates_data/latest',params=params,headers=headers)
         response.raise_for_status()
         data = response.json()
 
         if 'rates' in data and 'RUB' in data['rates']:
+            print(data['ratest']['RUB'])
             return data['rates']['RUB']
         else:
             raise ValueError("Неверный формат ответа от API")
