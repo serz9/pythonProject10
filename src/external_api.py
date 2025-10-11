@@ -9,12 +9,10 @@ load_dotenv()
 
 
 
-API_KEY =os.getenv('API_KEY')
+API_KEY = os.getenv('API_KEY')
 if not API_KEY:
     raise ValueError("API_KEY не найден в переменых окружения")
 
-
-BASE_URL = os.getenv('BASE_URL')
 
 logging.basicConfig(
 
@@ -34,10 +32,8 @@ my_logger = logging.getLogger(__name__)
 
 def convert_transaction(transaction):
 
-    """
-    Возвращает результат транзакции в рублях
+    """   Возвращает результат транзакции в рублях   """
 
-    """
     try:
         amount = float(transaction['operationAmount']['amount'])
         currency_code = transaction['operationAmount']['currency']['code']
@@ -46,13 +42,11 @@ def convert_transaction(transaction):
             return amount
         else:
             rate = get_exchange_rate(currency_code)
-            #print(rate)
 
         if rate is None:
             raise ValueError('Не удалось получить курс валют')
 
         rub_amount = amount*rate
-        #print(round(rub_amount,2))
         return round(rub_amount, 2)
 
     except Exception as e:
@@ -60,39 +54,37 @@ def convert_transaction(transaction):
     return None
 
 
-def get_exchange_rate(currency) :
-
+def get_exchange_rate(currency):
 
     try:
         headers = {'apikey': API_KEY}
 
         params = {
-               'symbols':'RUB',
-               'base':currency
+               'symbols': 'RUB',
+               'base': currency
 
         }
-        response = requests.get('https://api.apilayer.com/exchangerates_data/latest',params=params,headers=headers)
+        response = requests.get('https://api.apilayer.com/exchangerates_data/latest', params=params, headers=headers)
         response.raise_for_status()
         data = response.json()
 
         if 'rates' in data and 'RUB' in data['rates']:
-            print(data['ratest']['RUB'])
             return data['rates']['RUB']
         else:
             raise ValueError("Неверный формат ответа от API")
 
 
-
     except Exception as e:
         my_logger.error(f'ошибка {str(e)}')
 
-if __name__ ==' __main__ ':
+
+if __name__ =='__main__':
 
     convert_transaction( {
         'operationAmount': {
             'amount': '100.50',
             'currency': {
-                'code': 'EUR'
+                'code': 'USD'
             }
         }
     })

@@ -77,3 +77,13 @@
 2025-09-28 09:00:13,891 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ:пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 2025-09-29 22:38:04,313 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅ 404 Client Error: Not Found for url: https://apilayer.com/marketplace/exchangerates_data/latest?symbols=RUB&base=EUR
 2025-09-29 22:38:04,319 ERROR: пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ:пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+2025-10-12 02:06:43,537 ERROR: ошибка HTTPSConnectionPool(host='api.apilayer.com', port=443): Max retries exceeded with url: /exchangerates_data/latest?symbols=RUB&base=EUR (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002893A737DA0>: Failed to resolve 'api.apilayer.com' ([Errno 11001] getaddrinfo failed)"))
+2025-10-12 02:06:43,538 ERROR: Непредвиденная ошибка:Не удалось получить курс валют
+2025-10-12 02:13:16,245 ERROR: ошибка HTTPSConnectionPool(host='api.apilayer.com', port=443): Max retries exceeded with url: /exchangerates_data/latest?symbols=RUB&base=EUR (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001B7AF2E4860>: Failed to resolve 'api.apilayer.com' ([Errno 11001] getaddrinfo failed)"))
+2025-10-12 02:13:16,245 ERROR: Непредвиденная ошибка:Не удалось получить курс валют
+2025-10-12 02:20:11,567 ERROR: ошибка HTTPSConnectionPool(host='api.apilayer.com', port=443): Max retries exceeded with url: /exchangerates_data/latest?symbols=RUB&base=EUR (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000028708374800>: Failed to resolve 'api.apilayer.com' ([Errno 11001] getaddrinfo failed)"))
+2025-10-12 02:20:11,568 ERROR: Непредвиденная ошибка:Не удалось получить курс валют
+2025-10-12 02:39:16,842 ERROR: ошибка 401 Client Error: Unauthorized for url: https://api.apilayer.com/exchangerates_data/latest?symbols=RUB&base=EUR
+2025-10-12 02:39:16,845 ERROR: Непредвиденная ошибка:Не удалось получить курс валют
+2025-10-12 02:41:45,843 ERROR: ошибка 401 Client Error: Unauthorized for url: https://api.apilayer.com/exchangerates_data/latest?symbols=RUB&base=USD
+2025-10-12 02:41:45,849 ERROR: Непредвиденная ошибка:Не удалось получить курс валют

@@ -1,9 +1,0 @@
-  __pycahce__/
-  venv
-  .idea/
-  *.pyc
-  *.log
-  .env
-  .mypy_cache
-
-

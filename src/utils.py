@@ -1,21 +1,18 @@
 import os.path
 import json
-from dotenv import load_dotenv
 
 
-
-load_dotenv()
-def jsn_date(path_)  :
+def jsn_date(path_):
 
     """   Функция проверки данных   """
 
     date_path = path_
-    data=[]
+    data = []
     try:
         if not os.path.isfile(date_path):
             return data
         else:
-            with open(date_path,'r',encoding='utf-8') as file:
+            with open(date_path, 'r', encoding='utf-8') as file:
                 data_ = json.load(file)
 
             if isinstance(data_, list):
@@ -32,7 +29,8 @@ def jsn_date(path_)  :
     except Exception as e :
         print(f'ошибка {e}')
 
-if  __name__ == '__main__':
+
+if __name__ == '__main__':
 
     jsn_date(r'C:/Users/serzh/PycharmProjects/pythonProject10/date/operations.json')
 

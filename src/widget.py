@@ -30,13 +30,6 @@ def mask_account_card(riquisites: str) -> str:
         return res
 
 
-
-
-mask_account_card('Счет 23452345234523452345')
-#mask_account_card('Visa Platinum 7000792289606361')
-
-
-
 def get_time(timest: Union[str]) -> str:
 
     """ функция изменяет формат строки в обьекте Data """
@@ -49,4 +42,8 @@ def get_time(timest: Union[str]) -> str:
     return timestr_2
 
 
-get_time('2018-11-07T13:12:05.485858')
+if __name__ == '__main__':
+
+    mask_account_card('Счет 23452345234523452345')
+    """mask_account_card('Visa Platinum 7000792289606361')"""
+    get_time('2018-11-07T13:12:05.485858')

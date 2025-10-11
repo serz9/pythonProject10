@@ -40,25 +40,23 @@ def filter_by_currency(tranzactions_list: list[str], currency: [str]):
     return res
 
 
-filter_run = filter_by_currency(tranzactions_list, 'USD')
-for tranzaction in filter_run:
-    print(tranzaction)
-
-filter_by_currency(tranzactions_list, 'USD')
+#filter_run = filter_by_currency(tranzactions_list, 'USD')
+#for tranzaction in filter_run:
+    #print(tranzaction)
 
 
 def transaction_descriptions(tranzactions_list):
 
     """   Описание транзакций   """
 
-    #res = (i['description'] for i in tranzactions_list)
+    res_ = (i['description'] for i in tranzactions_list)
     for i in tranzactions_list:
         yield i['description']
 
 
-res_ = transaction_descriptions(tranzactions_list)
-for n in tranzactions_list:
-    print(next(res_))
+    res_ = transaction_descriptions(tranzactions_list)
+    for n in tranzactions_list:
+        print(next(res_))
 
 
 def card_number_generator(start,end):
@@ -74,3 +72,21 @@ all_numbers = card_number_generator(1,5)
 
 for i in all_numbers:
     print(i)
+
+
+if __name__ == '_main__' :
+
+    filter_run = filter_by_currency(tranzactions_list, 'USD')
+    for tranzaction in filter_run:
+        print(tranzaction)
+
+
+    filter_by_currency(tranzactions_list, 'USD')
+    res_ = transaction_descriptions(tranzactions_list)
+    for n in tranzactions_list:
+         print(next(res_))
+
+
+    all_numbers = card_number_generator(1,5)
+    for i in all_numbers:
+        print(i)
