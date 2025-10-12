@@ -87,3 +87,9 @@
 2025-10-12 02:39:16,845 ERROR: Непредвиденная ошибка:Не удалось получить курс валют
 2025-10-12 02:41:45,843 ERROR: ошибка 401 Client Error: Unauthorized for url: https://api.apilayer.com/exchangerates_data/latest?symbols=RUB&base=USD
 2025-10-12 02:41:45,849 ERROR: Непредвиденная ошибка:Не удалось получить курс валют
+2025-10-12 04:17:59,472 ERROR: ошибка 401 Client Error: Unauthorized for url: https://api.apilayer.com/exchangerates_data/latest?symbols=RUB&base=USD
+2025-10-12 04:17:59,474 ERROR: Непредвиденная ошибка:Не удалось получить курс валют
+2025-10-12 04:19:51,536 ERROR: ошибка 401 Client Error: Unauthorized for url: https://api.apilayer.com/exchangerates_data/latest?symbols=RUB&base=USD
+2025-10-12 04:19:51,542 ERROR: Непредвиденная ошибка:Не удалось получить курс валют
+2025-10-13 01:52:25,536 ERROR: ошибка 401 Client Error: Unauthorized for url: https://api.apilayer.com/exchangerates_data/latest?symbols=RUB&base=USD
+2025-10-13 01:52:25,550 ERROR: Непредвиденная ошибка:Не удалось получить курс валют

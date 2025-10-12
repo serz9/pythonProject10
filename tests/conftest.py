@@ -1,5 +1,6 @@
-import pytest
 from unittest.mock import Mock
+
+import pytest
 
 
 @pytest.fixture
@@ -20,12 +21,17 @@ def setup_env(monkeypatch):
     monkeypatch.setenv('BASE_URL', 'https://test.api.com')
 
 
-#Фикстура для транзакции в рублях
-
 @pytest.fixture
 def rub_transaction():
     return {
         'operationAmount': {
             'amount': '100.50',
             'currency': {'code': 'RUB'}
+        }}
+@pytest.fixture
+def eur_transaction():
+    return {
+        'operationAmount': {
+            'amount': '100',
+            'currency': {'code': 'EUR'}
         }}

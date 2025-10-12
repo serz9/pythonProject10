@@ -7,7 +7,6 @@ def mask_account_card(riquisites: str) -> str:
 
     """ функция возвращае замаскированный счет или номер банковской карты"""
 
-
     riquisites_letter: list[str] = []
     riquisites_number: list[str] = []
 

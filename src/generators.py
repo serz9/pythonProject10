@@ -74,7 +74,7 @@ for i in all_numbers:
     print(i)
 
 
-if __name__ == '_main__' :
+if __name__ == '_main__':
 
     filter_run = filter_by_currency(tranzactions_list, 'USD')
     for tranzaction in filter_run:

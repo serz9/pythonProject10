@@ -2,6 +2,7 @@ from datetime import datetime
 from functools import wraps
 from typing import Optional
 
+
 def log(filename:Optional[str]):
 
     """   Декоратор фиксирует роботу функции  консоль или в файл log.txt   """
