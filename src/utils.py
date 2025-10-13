@@ -5,7 +5,7 @@ import os.path
 
 def jsn_date(path_):
 
-    """   Функция проверки данных   """
+    """Функция проверки данных"""
 
     date_path = path_
     data = []
@@ -13,26 +13,24 @@ def jsn_date(path_):
         if not os.path.isfile(date_path):
             return data
         else:
-            with open(date_path, 'r', encoding='utf-8') as file:
+            with open(date_path, "r", encoding="utf-8") as file:
                 data_ = json.load(file)
 
             if isinstance(data_, list):
-                print('данные являются списком')
+                print("данные являются списком")
                 if all(isinstance(item, dict) for item in data_):
-                    print('файл является списком словарей ')
+                    print("файл является списком словарей ")
                 else:
                     return data
             if len(data_) == 0:
                 print(data)
-                return(data)
+                return data
 
             return data_
-    except Exception as e :
-        print(f'ошибка {e}')
+    except Exception as e:
+        print(f"ошибка {e}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":  #pragma: no cover
 
-    jsn_date(r'C:/Users/serzh/PycharmProjects/pythonProject10/date/operations.json')
-
-
+    jsn_date(r"C:/Users/serzh/PycharmProjects/pythonProject10/date/operations.json")
