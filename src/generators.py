@@ -68,10 +68,6 @@ def card_number_generator(start,end):
         formatted_card_number = ' '.join([card_number[i:i+4] for i in range(0, 16, 4)])
         yield formatted_card_number
 
-all_numbers = card_number_generator(1,5)
-
-for i in all_numbers:
-    print(i)
 
 
 if __name__ == '_main__':
