@@ -15,7 +15,7 @@ masks_logger.addHandler(file_handler)
 
 def get_mask_card_number(cartdate: Union[str]) -> Union[str]:
 
-    """Функция возвращает скрытый номер банковской карты"""
+    """   Функция возвращает скрытый номер банковской карты   """
 
     try:
         if cartdate.isdigit() == False:
@@ -51,7 +51,7 @@ def get_mask_card_number(cartdate: Union[str]) -> Union[str]:
 
 def get_mask_account(bankaccount: Union[str]) -> Union[str]:
 
-    """Функция возвращает  скрытый номер банковского счета"""
+    """   Функция возвращает  скрытый номер банковского счета   """
 
     try:
         if bankaccount.isdigit() == False:
