@@ -39,7 +39,7 @@ def jsn_date(path_):
                 print(data)
                 return data
 
-            # utils_logger.info('Прoизведена проверка данных,отроботала функция jsn_date')
+            utils_logger.info('Прoизведена проверка данных,отроботала функция jsn_date')
             return data_
     except Exception as e:
         utils_logger.error(f"ошибка {str(e)}")
