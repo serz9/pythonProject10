@@ -15,15 +15,14 @@ utils_logger.addHandler(file_handler)
 
 
 def jsn_date(path_):
-
-    """   Функция проверки данных   """
+    """Функция проверки данных"""
 
     date_path = path_
     data = []
     try:
         utils_logger.info("Прoизведена проверка данных,отроботала функция jsn_date")
         if not os.path.isfile(date_path):
-            utils_logger.info(f" файл не найден{date_path},{str(e)} ")
+            utils_logger.info(f" файл не найден{date_path},{e} ")
             return data
         else:
             with open(date_path, "r", encoding="utf-8") as file:
@@ -40,7 +39,7 @@ def jsn_date(path_):
                 print(data)
                 return data
 
-            utils_logger.info('Прoизведена проверка данных,отроботала функция jsn_date')
+            utils_logger.info("Прoизведена проверка данных,отроботала функция jsn_date")
             return data_
     except Exception as e:
         utils_logger.error(f"ошибка {str(e)}")

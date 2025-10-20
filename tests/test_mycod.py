@@ -1,7 +1,4 @@
 import pytest
-
-from src.generators import (card_number_generator, filter_by_currency, transaction_descriptions,  # ,number
-                            tranzactions_list)
 from src.masks import get_mask_account, get_mask_card_number
 from src.processing import sort_by_date
 from src.widget import get_time, mask_account_card
@@ -86,7 +83,8 @@ from src.generators import filter_by_currency, get_number_generator, transaction
 
 
 def test_filter_by_currency():
-    """Тест фильтрации данных"""
+
+    """    Тест фильтрации данных   """
 
     res_ = list(filter_by_currency(tranzactions_list, "USD"))
     assert res_ == [
@@ -112,7 +110,8 @@ def test_filter_by_currency():
 
 
 def test_transaction_descriptions(test_tranzact_list):
-    """Тест описание транзакций"""
+
+    """   Тест описание транзакций    """
 
     res_ == list(transaction_descriptions(test_tranzact_list))
     assert res_ == ["Перевод организации", "Перевод со счета на счет"]

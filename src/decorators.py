@@ -4,8 +4,7 @@ from typing import Optional
 
 
 def log(filename: Optional[str] = None):
-
-    """   Функция декоратор с параметрами   """
+    """Функция декоратор с параметрами"""
 
     def decor(func):
         @wraps(func)
@@ -47,8 +46,7 @@ def log(filename: Optional[str] = None):
 
 @log(filename="logs.txt")
 def functt(a):
-
-    """   Функции   """
+    """Функции"""
 
     for i in range(a):
         print(a)
