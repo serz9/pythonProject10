@@ -34,6 +34,13 @@ def test_tranzact_list():
             "to": "Счет 75651667383060284188"
          }]
 
+
+@pytest.fixture
+def coll_1():
+    return [ {"id": 41428829, "state": "EXECUTED", "date": "2019-07-03T18:35:29.512364"},
+        {"id": 939719570, "state": "EXECUTED", "date": "2018-06-30T02:08:58.425572"},
+    ]
+
 @pytest.fixture(autouse=True)
 def setup_env(monkeypatch):
     monkeypatch.setenv("API_KEY", "test_api_key")
