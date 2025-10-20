@@ -23,7 +23,7 @@ def get_mask_card_number(cartdate: Union[str]) -> Union[str]:
             print(" Некорректные данные ")
             return " Некорректные данные "
         if len(cartdate) > 16:
-            masks_logger.infio(" Ведено колличество символов более необходимого ")
+            masks_logger.info(" Ведено колличество символов более необходимого ")
             print(" Вы ввели количество символов более необходимого ")
             return " Вы ввели количество символов более необходимого "
         if len(cartdate) < 16:

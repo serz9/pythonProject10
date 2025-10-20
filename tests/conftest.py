@@ -32,7 +32,8 @@ def test_tranzact_list():
             "description": "Перевод со счета на счет",
             "from": "Счет 19708645243227258542",
             "to": "Счет 75651667383060284188"
-         }]
+         }
+    ]
 
 
 @pytest.fixture
