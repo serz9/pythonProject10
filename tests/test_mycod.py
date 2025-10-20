@@ -109,8 +109,10 @@ def test_transaction_descriptions(test_tranzact_list):
 
     """   Тест описание транзакций   """
 
-    res_ == list(transaction_descriptions(test_tranzact_list))
-    assert res_ == ["Перевод организации", "Перевод со счета на счет"]
+    ["Перевод организации", "Перевод со счета на счет"]
+
+    res == list(transaction_descriptions(test_tranzact_list))
+    assert res ==["Перевод организации", "Перевод со счета на счет"]
 
 
 # def get_number(number):
