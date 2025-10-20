@@ -20,31 +20,36 @@ def test_get_mask_card_number_long():
 
 
 def test_get_mask_card_number_error():
-    """Проверка на не соответствие выходных параметров ожидемых при заведомо не правильных входных"""
+
+    """   Проверка на не соответствие выходных параметров ожидемых при заведомо не правильных входных   """
 
     assert get_mask_card_number("assdasddsdssassd") == " Некорректные данные "
 
 
 def test_get_mask_card_number_short():
-    """Проверка на не соответствие выходных параметров ожидемых при заведомо не правильных входных"""
+
+    """   Проверка на не соответствие выходных параметров ожидемых при заведомо не правильных входных   """
 
     assert get_mask_card_number("384848") == " Вы ввели количество символов менее необходимого "
 
 
 def test_get_mask_account_short():
-    """Проверка на не соответствие выходных параметров ожидаеемым  при заведомо неправильных  входных"""
+
+    """   Проверка на не соответствие выходных параметров ожидаеемым  при заведомо неправильных  входных   """
 
     assert get_mask_account("373664") == " Вы ввели количество символов менее необходимого "
 
 
 def test_get_mask_account_long():
-    """Проверка на соответствие выходных параметров ожидаеемым  при привышении длинны строки"""
+
+    """   Проверка на соответствие выходных параметров ожидаеемым  при привышении длинны строки   """
 
     assert get_mask_account("293848484005005500354323434") == " Вы ввели количество символов более необходимого "
 
 
 def test_get_mask_account_error():
-    """Проверка на не соответствие выходных параметров ожидаеемым  при заведомо неправильных  входных"""
+
+    """   Проверка на не соответствие выходных параметров ожидаеемым  при заведомо неправильных  входных   """
 
     assert get_mask_account("ahshdjsjajsjdjfj") == " Некорректные данные "
 
@@ -58,7 +63,8 @@ def test_get_mask_account_error():
 
 
 def test_sort_by_date(coll_1):
-    """Проверка  сортировки по дате"""
+
+    """  Проверка  сортировки по дате   """
 
     assert sort_by_date(coll_1) == [
         {"id": 41428829, "state": "EXECUTED", "date": "2019-07-03T18:35:29.512364"},
@@ -86,7 +92,8 @@ from src.generators import filter_by_currency, get_number_generator, transaction
 
 
 def test_filter_by_currency():
-    """Тест фильтрации данных"""
+
+    """   Тест фильтрации данных   """
 
     res_ = list(filter_by_currency(tranzactions_list, "USD"))
     assert res_ == [
@@ -111,8 +118,9 @@ def test_filter_by_currency():
     ]
 
 
-def test_transaction_descriptions(test_tranzact_list):
-    """Тест описание транзакций"""
+def test_transaction_descriptions(test_tranzact_list)
+
+    """   Тест описание транзакций   """
 
     res_ == list(transaction_descriptions(test_tranzact_list))
     assert res_ == ["Перевод организации", "Перевод со счета на счет"]
@@ -137,7 +145,8 @@ def test_transaction_descriptions(test_tranzact_list):
 
 
 def test_card_namber_generator():
-    """Функция проверки генератора номеров карт"""
+
+    """   Функция проверки генератора номеров карт   """
 
     res = list(get_number_generator(1, 5))
     expected = [
