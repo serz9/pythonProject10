@@ -46,7 +46,7 @@ def transaction_descriptions(tranzactions_list):
 
 def card_number_generator(start, end):
 
-    """Функция  преобразует номера карт в формат 0000 0000 0043 4564"""
+    """   Функция  преобразует номера карт в формат 0000 0000 0043 4564   """
 
     for number in range(start, end + 1):
         card_number = str(number).zfill(16)
