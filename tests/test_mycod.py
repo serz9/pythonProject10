@@ -1,17 +1,20 @@
 import pytest
+
 from src.masks import get_mask_account, get_mask_card_number
 from src.processing import sort_by_date
 from src.widget import get_time, mask_account_card
-
+from src.generators import card_number_generator
 
 def test_get_mask_card_number():
-    """Проверка на соответствие выходных параметров ожидаемым"""
+
+    """   Проверка на соответствие выходных параметров ожидаемым   """
 
     assert get_mask_card_number("8384888559998899") == "8384 88** **** 8899"
 
 
 def test_get_mask_card_number_long():
-    """Проверка на соответствие выходных параметров ожидаемым при привышении длины строки"""
+
+    """   Проверка на соответствие выходных параметров ожидаемым при привышении длины строки   """
 
     assert get_mask_card_number("83848885599988991") == " Вы ввели количество символов более необходимого "
 
@@ -83,8 +86,7 @@ from src.generators import filter_by_currency, get_number_generator, transaction
 
 
 def test_filter_by_currency():
-
-    """    Тест фильтрации данных   """
+    """Тест фильтрации данных"""
 
     res_ = list(filter_by_currency(tranzactions_list, "USD"))
     assert res_ == [
@@ -110,8 +112,7 @@ def test_filter_by_currency():
 
 
 def test_transaction_descriptions(test_tranzact_list):
-
-    """   Тест описание транзакций    """
+    """Тест описание транзакций"""
 
     res_ == list(transaction_descriptions(test_tranzact_list))
     assert res_ == ["Перевод организации", "Перевод со счета на счет"]
