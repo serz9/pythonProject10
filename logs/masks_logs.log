@@ -57,3 +57,12 @@
  2025-10-21 02:49:47,784 masks_logger INFO: Введены некоректные данные 
  2025-10-21 02:49:47,804 masks_logger INFO: отроботала функция get_mask_account 
  2025-10-21 02:49:47,808 masks_logger INFO:  отработала функция  get_mask_card_number  
+ 2025-10-21 03:16:35,357 masks_logger INFO:  отработала функция  get_mask_card_number  
+ 2025-10-21 03:16:35,361 masks_logger ERROR: ошибка 'Logger' object has no attribute 'infio' 
+ 2025-10-21 03:16:35,447 masks_logger INFO:  Введены не корректные данные  
+ 2025-10-21 03:16:35,449 masks_logger INFO:  Введено колличество символов менее необходимого  
+ 2025-10-21 03:16:35,454 masks_logger INFO: Введено колличество символов менее необходимого 
+ 2025-10-21 03:16:35,457 masks_logger INFO: Введено колличество сиволов более необходимого 
+ 2025-10-21 03:16:35,461 masks_logger INFO: Введены некоректные данные 
+ 2025-10-21 03:16:35,471 masks_logger INFO: отроботала функция get_mask_account 
+ 2025-10-21 03:16:35,475 masks_logger INFO:  отработала функция  get_mask_card_number  

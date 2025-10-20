@@ -1,7 +1,7 @@
 import pytest
 @pytest.fixture
 def test_tranzact_list():
-    return  [
+    return [
           {
          "id": 939719570,
          "state": "EXECUTED",
@@ -41,10 +41,6 @@ def coll_1():
         {"id": 939719570, "state": "EXECUTED", "date": "2018-06-30T02:08:58.425572"},
     ]
 
-
-@pytest.fixture
-def test_tranzact_list()  :
-    return ["Перевод организации", "Перевод со счета на счет"]
 
 @pytest.fixture(autouse=True)
 def setup_env(monkeypatch):
