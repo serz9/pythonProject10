@@ -46,7 +46,8 @@ def log(filename: Optional[str] = None):
 
 @log(filename="logs.txt")
 def functt(a):
-    """Функции"""
+
+    """   Функции   """
 
     for i in range(a):
         print(a)
