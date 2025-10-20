@@ -3,7 +3,7 @@ import pytest
 from src.masks import get_mask_account, get_mask_card_number
 from src.processing import sort_by_date
 from src.widget import get_time, mask_account_card
-from src.generators import card_number_generator
+from src.generators import filter_by_currency, get_number_generator, transaction_descriptions, tranzactions_list
 
 def test_get_mask_card_number():
 
@@ -86,11 +86,6 @@ def test_get_mask_account_card(value, expected):
     assert mask_account_card(value) == expected
 
 
-import pytest
-
-from src.generators import filter_by_currency, get_number_generator, transaction_descriptions, tranzactions_list
-
-
 def test_filter_by_currency():
 
     """   Тест фильтрации данных   """
@@ -118,7 +113,7 @@ def test_filter_by_currency():
     ]
 
 
-def test_transaction_descriptions(test_tranzact_list)
+def test_transaction_descriptions(test_tranzact_list):
 
     """   Тест описание транзакций   """
 
