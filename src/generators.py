@@ -33,7 +33,8 @@ def filter_by_currency(tranzactions_list: list[str], currency: [str]):
 
 
 def transaction_descriptions(tranzactions_list):
-    """Описание транзакций"""
+
+    """   Описание транзакций   """
 
     res_ = (i["description"] for i in tranzactions_list)
     for i in tranzactions_list:
