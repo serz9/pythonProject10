@@ -1,5 +1,6 @@
 import pytest
 
+from unittest.mock import Mock
 from src.generators import card_number_generator, filter_by_currency, transaction_descriptions, tranzactions_list
 from src.masks import get_mask_account, get_mask_card_number
 from src.processing import sort_by_date
@@ -130,10 +131,17 @@ def test_card_namber_generator():
 
     assert res == expected
 
+def test_decorator_with_mock():
+    mock_func = Mock(return_value="mocked")
+    dec_func = log(mock_func)
 
+    result = dec_func(5)
+
+    mock_func.assert_called_once_with(5)
+    assert result == "mocked"
 def test_decor():
     with pytest.raises(NameError) as func_errors:
-        func(5, 3)
+        functt('5')
         assert func_errors.value == NameError
 
 
