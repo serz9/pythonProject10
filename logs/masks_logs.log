@@ -432,3 +432,4 @@
  2025-10-22 03:19:56,334 masks_logger INFO:  отработала функция  get_mask_card_number  
  2025-10-22 03:29:07,249 masks_logger INFO:  отработала функция  get_mask_card_number  
  2025-10-22 03:29:07,251 masks_logger INFO: отроботала функция get_mask_account 
+ 2025-10-22 03:32:51,236 masks_logger INFO: отроботала функция get_mask_account 

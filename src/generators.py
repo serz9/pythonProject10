@@ -21,8 +21,7 @@ tranzactions_list = [
 
 
 def filter_by_currency(tranzactions_list: list[str], currency: [str]):
-
-    """   Функция фильтрации   """
+    """Функция фильтрации"""
 
     res = (i for i in tranzactions_list if i["operationAmount"]["currency"]["code"] == currency)
     return res
@@ -34,8 +33,7 @@ def filter_by_currency(tranzactions_list: list[str], currency: [str]):
 
 
 def transaction_descriptions(tranzactions_list):
-
-    """   Описание транзакций   """
+    """Описание транзакций"""
 
     res_ = (i["description"] for i in tranzactions_list)
     for i in tranzactions_list:
@@ -47,8 +45,7 @@ def transaction_descriptions(tranzactions_list):
 
 
 def card_number_generator(start, end):
-
-    """   Функция  преобразует номера карт в формат 0000 0000 0043 4564   """
+    """Функция  преобразует номера карт в формат 0000 0000 0043 4564"""
 
     for number in range(start, end + 1):
         card_number = str(number).zfill(16)
