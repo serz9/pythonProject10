@@ -7,8 +7,7 @@ from src.utils import jsn_date
 
 
 def test_filter_by_currency():
-
-    """   Тест фильтрации данных   """
+    """Тест фильтрации данных"""
 
     res_ = filter_by_currency(tranzactions_list, "USD")
     assert list(res_) == [
@@ -25,8 +24,7 @@ def test_filter_by_currency():
 
 
 def test_transaction_descriptions():
-
-    """   Тест описание транзакций   """
+    """Тест описание транзакций"""
 
     assert list(transaction_descriptions(tranzactions_list)) == ["Перевод организации", "Перевод со счета на счет"]
 

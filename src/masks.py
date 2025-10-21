@@ -17,7 +17,7 @@ def get_mask_card_number(cartdate: Union[str]) -> Union[str]:
     """Функция возвращает скрытый номер банковской карты"""
 
     try:
-        if cartdate.isdigit() == False:
+        if cartdate.isdigit() is False:
             masks_logger.info(" Введены не корректные данные ")
             print(" Некорректные данные ")
             return " Некорректные данные "
@@ -49,10 +49,11 @@ def get_mask_card_number(cartdate: Union[str]) -> Union[str]:
 
 
 def get_mask_account(bankaccount: Union[str]) -> Union[str]:
-    """Функция возвращает  скрытый номер банковского счета"""
+
+    """   Функция возвращает  скрытый номер банковского счета   """
 
     try:
-        if bankaccount.isdigit() == False:
+        if bankaccount.isdigit() is False:
             print(" Некорректные данные ")
             masks_logger.info("Введены некоректные данные")
             return " Некорректные данные "

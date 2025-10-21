@@ -15,8 +15,7 @@ utils_logger.addHandler(file_handler)
 
 
 def jsn_date(path_):
-
-    """   Функция проверки данных   """
+    """Функция проверки данных"""
 
     date_path = path_
     data = []

@@ -9,58 +9,49 @@ from src.decorators import log
 
 
 def test_get_mask_card_number():
-
-    """   Проверка на соответствие выходных параметров ожидаемым   """
+    """Проверка на соответствие выходных параметров ожидаемым"""
 
     assert get_mask_card_number("8384888559998899") == "8384 88** **** 8899"
 
 
 def test_get_mask_card_number_long():
-
-    """   Проверка на соответствие выходных параметров ожидаемым при привышении длины строки   """
+    """Проверка на соответствие выходных параметров ожидаемым при привышении длины строки"""
 
     assert get_mask_card_number("83848885599988991") == " Вы ввели количество символов более необходимого "
 
 
 def test_get_mask_card_number_error():
-
-    """   Проверка на не соответствие выходных параметров ожидемых при заведомо не правильных входных   """
+    """Проверка на не соответствие выходных параметров ожидемых при заведомо не правильных входных"""
 
     assert get_mask_card_number("assdasddsdssassd") == " Некорректные данные "
 
 
 def test_get_mask_card_number_short():
-
-    """   Проверка на не соответствие выходных параметров ожидемых при заведомо не правильных входных   """
+    """Проверка на не соответствие выходных параметров ожидемых при заведомо не правильных входных"""
 
     assert get_mask_card_number("384848") == " Вы ввели количество символов менее необходимого "
 
 
 def test_get_mask_account_short():
-
-    """   Проверка на не соответствие выходных параметров ожидаеемым  при заведомо неправильных  входных   """
+    """Проверка на не соответствие выходных параметров ожидаеемым  при заведомо неправильных  входных"""
 
     assert get_mask_account("373664") == " Вы ввели количество символов менее необходимого "
 
 
 def test_get_mask_account_long():
-
-    """   Проверка на соответствие выходных параметров ожидаеемым  при привышении длинны строки   """
+    """Проверка на соответствие выходных параметров ожидаеемым  при привышении длинны строки"""
 
     assert get_mask_account("293848484005005500354323434") == " Вы ввели количество символов более необходимого "
 
 
 def test_get_mask_account_error():
-
-    """   Проверка на не соответствие выходных параметров ожидаеемым  при заведомо неправильных  входных   """
+    """Проверка на не соответствие выходных параметров ожидаеемым  при заведомо неправильных  входных"""
 
     assert get_mask_account("ahshdjsjajsjdjfj") == " Некорректные данные "
 
 
-
 def test_sort_by_date(coll_1):
-
-    """   Проверка  сортировки по дате   """
+    """Проверка  сортировки по дате"""
 
     assert sort_by_date(coll_1) == [
         {"id": 41428829, "state": "EXECUTED", "date": "2019-07-03T18:35:29.512364"},
@@ -83,8 +74,7 @@ def test_get_mask_account_card(value, expected):
 
 
 def test_filter_by_currency():
-
-    """   Тест фильтрации данных   """
+    """Тест фильтрации данных"""
 
     res_ = list(filter_by_currency(tranzactions_list, "USD"))
     assert res_ == [
@@ -101,8 +91,7 @@ def test_filter_by_currency():
 
 
 def test_transaction_descriptions(test_tranzact_list):
-
-    """   Тест описание транзакций   """
+    """Тест описание транзакций"""
 
     result = list(transaction_descriptions(test_tranzact_list))
     print(result)
@@ -110,8 +99,7 @@ def test_transaction_descriptions(test_tranzact_list):
 
 
 def test_card_namber_generator():
-
-    """   Функция проверки генератора номеров карт   """
+    """Функция проверки генератора номеров карт"""
 
     res = list(card_number_generator(1, 5))
     expected = [
@@ -137,7 +125,7 @@ def test_decorator_with_mock():
 
 def test_decor():
     with pytest.raises(NameError) as func_errors:
-        functt("5")
+        func("5")
         assert func_errors.value == NameError
 
 
