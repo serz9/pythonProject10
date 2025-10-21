@@ -4,7 +4,7 @@ from src.generators import card_number_generator, filter_by_currency, transactio
 from src.masks import get_mask_account, get_mask_card_number
 from src.processing import sort_by_date
 from src.widget import get_time, mask_account_card
-
+from src.decorators import log
 
 def test_get_mask_card_number():
 

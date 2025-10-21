@@ -3,8 +3,10 @@ from functools import wraps
 from typing import Optional
 
 
+
 def log(filename: Optional[str] = None):
-    """Функция декоратор с параметрами"""
+
+    """   Функция декоратор с параметрами   """
 
     def decor(func):
         @wraps(func)
@@ -42,6 +44,21 @@ def log(filename: Optional[str] = None):
         return wrapp
 
     return decor
+
+
+def test_my_decorator(capsys):
+    @log
+    def test_function(a):
+        return a
+
+    result = test_function("Hello")
+    captured = capsys.readouterr()
+
+    assert result == "Hello"
+    assert "До выполнения функции" in captured.out
+    assert "После выполнения функции" in captured.out
+
+
 
 
 @log(filename="logs.txt")
