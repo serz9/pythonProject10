@@ -7,6 +7,9 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
+python-dotenv = "^1.1.1"
+requests = "^2.32.4"
+dotenv = "^0.9.9"
 
 
 [tool.poetry.group.lint.dependencies]
@@ -29,14 +32,9 @@ max-line-length = 119
 
 [tool.black]
 line-length = 119
-exclude = """ ( /(
-                 | .git
-                 )) """
-
-
 
 [tool.mypy]
-disullow_antyped_defs = true
+disallow_antyped_defs = true
 warn_return_any = true
 exclude = 'venv'
 
