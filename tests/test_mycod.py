@@ -83,7 +83,8 @@ def test_get_mask_account_card(value, expected):
 
 
 def test_filter_by_currency():
-    """Тест фильтрации данных"""
+
+    """   Тест фильтрации данных   """
 
     res_ = list(filter_by_currency(tranzactions_list, "USD"))
     assert res_ == [
@@ -100,7 +101,8 @@ def test_filter_by_currency():
 
 
 def test_transaction_descriptions(test_tranzact_list):
-    """Тест описание транзакций"""
+
+    """   Тест описание транзакций   """
 
     result = list(transaction_descriptions(test_tranzact_list))
     print(result)
@@ -108,7 +110,8 @@ def test_transaction_descriptions(test_tranzact_list):
 
 
 def test_card_namber_generator():
-    """Функция проверки генератора номеров карт"""
+
+    """   Функция проверки генератора номеров карт   """
 
     res = list(card_number_generator(1, 5))
     expected = [
