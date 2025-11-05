@@ -1,4 +1,7 @@
 import csv
+#import pandas
+
+
 #import get_csv_exel.py
 #pandas as pd
 
@@ -9,10 +12,8 @@ print(s)
 #
 
 
-with open('src.transactions.csv') as file :
+with open(r'C:\Users\serzh\PycharmProjects\pythonProject10\src\transactions.csv') as file :
     reader = csv.reader(file)
-
-    next.reader
     for row in reader:
         print(row)
 
