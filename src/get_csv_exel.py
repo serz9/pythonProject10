@@ -1,25 +1,41 @@
+
+
+
+import pandas as pd
+
+
 import csv
-#import pandas
+
+def read_csv_transactioons(path_):
+    try:
+        csv_dict=[]
+        with open(path_,encoding='utf-8') as file:
+            reader = csv.reader(file,delimiter=';')
+            header_= next(reader)
+            for row in reader:
+                csv_str = dict(zip(header_,row))
+                csv_dict.append(csv_str)
+
+            print(csv_dict)
+    except Exception as e:
+        print(f"ошибка {e} ")
 
 
-#import get_csv_exel.py
-#pandas as pd
-
-import os
-s = os.getcwd()
-print(s)
-#def csv_read()
-#
+read_csv_transactioons(r'C:\\Users\\serzh\\PycharmProjects\\pythonProject10\\src\\transactions.csv')
 
 
-with open(r'C:\Users\serzh\PycharmProjects\pythonProject10\src\transactions.csv') as file :
-    reader = csv.reader(file)
-    for row in reader:
-        print(row)
+def read_excel_transactions(path_):
+    excel_dicts = []
+    reader = pd.read_excel(path_,sheet_name='Лист 1')
+    for index,row in reader.iterrows():
+        head_= reader.head()
+        excel_dict=dict(zip(head_,row))
 
-#csv_read()
-#with open('src.transactions.csv') as file :
-    #reader=csv.reader(file)
-    #for row in reader:
-        #print(row)
-a
+        excel_dicts.append(excel_dict)
+
+    print(excel_dicts)
+
+read_excel_transactions(r'C:\\Users\\serzh\\PycharmProjects\\pythonProject10\\src\\transactions_excel.xlsx')
+
+
+
