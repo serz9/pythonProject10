@@ -8,7 +8,7 @@ import csv
 def read_csv_transactioons(path_):
     try:
         csv_dict = []
-        with open(path_,encoding='utf-8') as file:
+        with open(path_, encoding='utf-8') as file:
             reader = csv.reader(file, delimiter=';')
             header_ = next(reader)
             for row in reader:
@@ -25,7 +25,7 @@ read_csv_transactioons(r'C:\\Users\\serzh\\PycharmProjects\\pythonProject10\\src
 
 def read_excel_transactions(path_):
     excel_dicts = []
-    reader = pd.read_excel(path_,sheet_name='Лист 1')
+    reader = pd.read_excel(path_, sheet_name='Лист 1')
     for index, row in reader.iterrows():
         head_ = reader.head()
         excel_dict = dict(zip(head_, row))
