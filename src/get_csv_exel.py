@@ -20,7 +20,7 @@ def read_csv_transactions(path_):
         print(f"ошибка {e} ")
 
 
-read_csv_transactioons(r'C:\\Users\\serzh\\PycharmProjects\\pythonProject10\\src\\transactions.csv')
+read_csv_transactions(r'C:\\Users\\serzh\\PycharmProjects\\pythonProject10\\src\\transactions.csv')
 
 
 def read_excel_transactions(path_):

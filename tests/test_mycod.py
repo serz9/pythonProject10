@@ -3,8 +3,8 @@ from unittest.mock import Mock,patch
 from src.masks import get_mask_account, get_mask_card_number
 from src.processing import sort_by_date
 from src.widget import get_time, mask_account_card
-from src.generators import filter_by_currency, transaction_descriptions, tranzactions_list, card_number_generator#,number
-from get_csv_exel import read_csv_transactions
+from src.generators import filter_by_currency, transaction_descriptions, tranzactions_list, card_number_generator
+from src.get_csv_exel import read_csv_transactions
 
 
 def test_get_mask_card_number():
@@ -76,8 +76,7 @@ def test_sort_by_date(coll_1):
                             ('Visa 3456 4657 5767 7373', 'Visa 3456 46** **** 7373'),])
 def test_get_mask_account_card(value, expected):
     assert mask_account_card(value) == expected
-import pytest
-from src.generators import filter_by_currency, transaction_descriptions, tranzactions_list, get_number_generator
+
 
 def test_filter_by_currency():
 
