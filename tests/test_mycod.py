@@ -118,7 +118,7 @@ def test_card_namber_generator():
 
     """   Функция проверки генератора номеров карт   """
 
-    res = list(get_number_generator(1,5))
+    res = list(card_number_generator(1,5))
     expected = [
 '0000 0000 0000 0001',
 '0000 0000 0000 0002',
