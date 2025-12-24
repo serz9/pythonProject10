@@ -1,8 +1,10 @@
 import pytest
+from unittest.mock import Mock,patch
 from src.masks import get_mask_account, get_mask_card_number
 from src.processing import sort_by_date
 from src.widget import get_time, mask_account_card
 from src.generators import filter_by_currency, transaction_descriptions, tranzactions_list, card_number_generator#,number
+from get_csv_exel import read_csv_transactions
 
 
 def test_get_mask_card_number():
@@ -140,3 +142,15 @@ def test_decorators(capsys):
 
 def test_get_time():
     assert get_time('2018-11-07T13:12:05.485858') == '07.11.2018'
+
+def text_read_csv_transaction():
+     #data_csv = #""" id,name\n
+                    #1, Eji """
+    red_kcv = Mock()
+    red_csv.return_value  =  1
+    result = red_csv('axe')
+    print(result)
+
+#with mocker.patch('builtins.open',mocker.mock_open(read_data=data_csv))
+    #result =read_csv_transaction('test_file')
+    #assert result == data_csv

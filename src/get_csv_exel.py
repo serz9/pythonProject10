@@ -5,7 +5,7 @@ import pandas as pd
 
 import csv
 
-def read_csv_transactioons(path_):
+def read_csv_transactions(path_):
     try:
         csv_dict = []
         with open(path_, encoding='utf-8') as file:
