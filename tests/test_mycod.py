@@ -1,10 +1,11 @@
 import pytest
-from unittest.mock import Mock,patch
+import pandas as pd
+from unittest.mock import mock_open,MagicMock
 from src.masks import get_mask_account, get_mask_card_number
 from src.processing import sort_by_date
 from src.widget import get_time, mask_account_card
 from src.generators import filter_by_currency, transaction_descriptions, tranzactions_list, card_number_generator
-from src.get_csv_exel import read_csv_transactions
+from src.get_csv_exel import read_csv_transactions, read_excel_transactions
 
 
 def test_get_mask_card_number():
@@ -142,14 +143,24 @@ def test_decorators(capsys):
 def test_get_time():
     assert get_time('2018-11-07T13:12:05.485858') == '07.11.2018'
 
-def text_read_csv_transaction():
-     #data_csv = #""" id,name\n
-                    #1, Eji """
-    red_kcv = Mock()
-    red_csv.return_value  =  1
-    result = red_csv('axe')
-    print(result)
+def test_read_csv_transaction(mocker):
+    data_csv = """id;name
+1;Eji 
+2;Irji"""
 
-#with mocker.patch('builtins.open',mocker.mock_open(read_data=data_csv))
-    #result =read_csv_transaction('test_file')
-    #assert result == data_csv
+    mocker.patch('builtins.open', mock_open(read_data=data_csv), create=True)
+    result = read_csv_transactions('test_file')
+
+    assert len(result) == 2
+    assert result[1] == {'id':'2','name':'Irji'}
+
+def test_read_csv_transactions(mocker):
+
+    data_excel = pd.DataFrame({'cl1': ['v1','v2'],
+                               'cl2': ['v3','v4']})
+
+    mocker.patch('pandas.read_excel', return_value=(data_excel))
+    result = read_excel_transactions('test_file')
+
+    assert len(result) == 2
+    assert result[1] == {'cl1':'v2','cl2':'v4'}
