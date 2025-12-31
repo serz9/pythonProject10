@@ -33,7 +33,7 @@ def read_excel_transactions(path_):
     except Exception as e :
         print(f"ошибка {e} ")
 
-read_excel_transactions(r'C:\\Users\\serzh\\PycharmProjects\\pythonProject10\\src\\transactions_excel.xlsx')
+#read_excel_transactions(r'C:\\Users\\serzh\\PycharmProjects\\pythonProject10\\src\\transactions_excel.xlsx')
 
 if __name__ == "__main__ " :
 
