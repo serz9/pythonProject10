@@ -6,6 +6,8 @@ import pandas as pd
 import csv
 
 def read_csv_transactions(path_):
+
+    """   Функция читает csv файлы   """
     try:
         csv_dict = []
         with open(path_, encoding='utf-8') as file:
@@ -19,8 +21,10 @@ def read_csv_transactions(path_):
     except Exception as e:
         print(f"ошибка {e} ")
 
-read_csv_transactions(r'C:\\Users\\serzh\\PycharmProjects\\pythonProject10\\src\\transactions.csv')
+#read_csv_transactions(r'C:\\Users\\serzh\\PycharmProjects\\pythonProject10\\src\\transactions.csv')
 def read_excel_transactions(path_):
+
+    """   Функция читает excel файлы   """
     try:
         excel_dicts = []
         reader = pd.read_excel(path_, sheet_name='Лист 1')
