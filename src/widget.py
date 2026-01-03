@@ -4,7 +4,7 @@ from src.masks import get_mask_account, get_mask_card_number
 
 def mask_account_card(riquisites: str) -> str:
 
-    """ функция возвращае замаскированный счет или номер банковской карты"""
+    """   Функция возвращае замаскированный счет или номер банковской карты   """
 
     riquisites_letter: list[str] = []
     riquisites_number: list[str] = []
