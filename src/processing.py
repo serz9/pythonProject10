@@ -6,7 +6,7 @@ def filter_by_state(dictioneris: list[dict[str, Any]], state: str = None) -> lis
 
     """   Функция сортировки словаря    """
 
-    dictioneris_1:list = []
+    dictioneris_1: list = []
 
     for i in dictioneris:
         if i['state'] == state:
@@ -28,5 +28,3 @@ def sort_by_date(dictionaries: list[dict[str, Any]], reverse: bool = True) -> li
 
 
 sort_by_date([{'id': 41428829, 'state': 'EXECUTED', 'date': '2019-07-03T18:35:29.512364'}, {'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572'}],)
-
-
