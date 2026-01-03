@@ -44,7 +44,3 @@ if __name__ == "__main__ ":
 
     read_csv_transactions(r'C:\\Users\\serzh\\PycharmProjects\\pythonProject10\\src\\transactions.csv')
     read_excel_transactions(r'C:\\Users\\serzh\\PycharmProjects\\pythonProject10\\src\\transactions_excel.xlsx')
-
-
-
-
