@@ -22,7 +22,7 @@ filter_by_state([{'id': 41428829, 'state': 'CANCELED', 'date': '2019-07-03T18:35
 
 def sort_by_date(dictionaries: list[dict[str, Any]], reverse: bool = True) -> list[dict[str, Any]]:
 
-    """   функция сортировки по дате по убыванию   """
+    """   Функция сортировки по дате по убыванию   """
 
     return sorted(dictionaries, key=lambda x: datetime.strptime(x['date'], '%Y-%m-%dT%H:%M:%S.%f'), reverse=reverse)
 
