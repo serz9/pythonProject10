@@ -8,6 +8,7 @@ import csv
 def read_csv_transactions(path_):
 
     """   Функция читает csv файлы   """
+
     try:
         csv_dict = []
         with open(path_, encoding='utf-8') as file:
