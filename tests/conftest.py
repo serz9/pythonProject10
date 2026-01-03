@@ -1,6 +1,7 @@
 import pytest
 
 @pytest.fixture
+
 def coll_1():
 
     return [
@@ -9,6 +10,7 @@ def coll_1():
     ]
 
 @pytest.fixture
+
 def test_tranzact_list():
 
     return [
