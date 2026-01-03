@@ -72,7 +72,7 @@ def card_number_generator(start, end):
         yield formatted_card_number
 
 
-all_numbers = card_number_generator(1,5)
+all_numbers = card_number_generator(1, 5)
 
 for i in all_numbers:
     print(i)
