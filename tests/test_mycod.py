@@ -1,6 +1,6 @@
 import pytest
 import pandas as pd
-from unittest.mock import mock_open,MagicMock
+from unittest.mock import mock_open
 from src.masks import get_mask_account, get_mask_card_number
 from src.processing import sort_by_date
 from src.widget import get_time, mask_account_card
@@ -57,17 +57,9 @@ def test_get_mask_account_error():
     assert get_mask_account('ahshdjsjajsjdjfj') == " Некорректные данные "
 
 
-#def test_filter_by_state():
-
-   # """ Проверка на правильность фильтрации """
-
-   #assert filter_by_state([{'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572'},
-                           # {'id': 41428829, 'state': 'CANCELED', 'date': '2019-07-03T18:35:29.512364'}]) == [{'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572'}]
-
-
 def test_sort_by_date(coll_1):
 
-    """ Проверка  сортировки по дате """
+    """   Проверка  сортировки по дате   """
 
     assert sort_by_date(coll_1) == [{'id': 41428829, 'state': 'EXECUTED', 'date': '2019-07-03T18:35:29.512364'},
                                     {'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572'}]
@@ -75,13 +67,14 @@ def test_sort_by_date(coll_1):
 
 @pytest.mark.parametrize('value,expected', [('Счет 23452345234523452345', 'Счет **2345',),
                             ('Visa 3456 4657 5767 7373', 'Visa 3456 46** **** 7373'),])
+
 def test_get_mask_account_card(value, expected):
     assert mask_account_card(value) == expected
 
 
 def test_filter_by_currency():
 
-    """  Тест фильтрации данных  """
+    """   Тест фильтрации данных   """
 
     res_ = list(filter_by_currency(tranzactions_list,'USD'))
     assert res_ == [{'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572', 'operationAmount': {'amount': '9824.07', 'currency': {'name': 'USD', 'code': 'USD'}}, 'description': 'Перевод организации', 'from': 'Счет 75106830613657916952', 'to': 'Счет 11776614605963066702'},
@@ -131,19 +124,31 @@ def test_card_namber_generator():
 
 
 def test_decor():
+
+    """    Функция проверки декораторп   """
+
     with pytest.raises(NameError) as func_errors:
         func(5,3)
         assert func_errors.value == NameError
 
 def test_decorators(capsys):
+
+    """    Функция проверки вывода в консоль   """
+
      print('functt ok')
      captured = capsys.readouterr()
      assert captured.out == 'functt ok\n'
 
 def test_get_time():
+
+    """   Функкция проверки  получения даты  и времени   """
+
     assert get_time('2018-11-07T13:12:05.485858') == '07.11.2018'
 
 def test_read_csv_transaction(mocker):
+
+    """    Функция мокирования ридера    """
+
     data_csv = """id;name
 1;Eji 
 2;Irji"""
