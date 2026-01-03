@@ -35,7 +35,7 @@ mask_account_card('Visa 3456 4657 5767 7373')
 
 def get_time(timest: Union[str]) -> str:
 
-    """ Функция изменяет формат строки в обьекте Data """
+    """   Функция изменяет формат строки в обьекте Data   """
 
     timestr_ = list(timest.split('T'))
     timestr_1 = list(timestr_[0].split('-'))
