@@ -16,7 +16,6 @@ def get_mask_card_number(cartdate: Union[str]) -> Union[str]:
         return " Вы ввели количество символов менее необходимого "
 
 
-
     new_cartdate = (
             cartdate[0:4]
             + " "
