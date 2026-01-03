@@ -43,8 +43,8 @@ def log(filename: Optional[str] = None):
 
     return decor
 
-@log(filename ='logs.txt')
 
+@log(filename ='logs.txt')
 def functt(a):
 
     """ Функци """
