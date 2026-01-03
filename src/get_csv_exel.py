@@ -16,7 +16,7 @@ def read_csv_transactions(path_):
             for row in reader:
                 csv_str = dict(zip(header_, row))
                 csv_dict.append(csv_str)
-            print(csv_dict)
+
             return csv_dict
     except Exception as e:
         print(f"ошибка {e} ")
