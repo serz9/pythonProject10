@@ -16,10 +16,10 @@ def log(filename: Optional[str] = None):
                 end_of_func = datetime.now()
                 end_of_func_ = end_of_func.strftime('%Y-%m_%d %H:%M:%S:%f\n')
                 if filename:
-                     with open('logs.txt', 'a', encoding='utf-8') as file:
-                         file.write(f'{func.__name__} ok\n')
-                         file.write(f'{start_of_func_}')
-                         file.write(f'{end_of_func_}')
+                    with open('logs.txt', 'a', encoding='utf-8') as file:
+                        file.write(f'{func.__name__} ok\n')
+                        file.write(f'{start_of_func_}')
+                        file.write(f'{end_of_func_}')
                 if not filename:
                     print(f'{func.__name__} ok\n')
                     print(start_of_func_)
