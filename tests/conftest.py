@@ -1,7 +1,7 @@
 import pytest
 
-@pytest.fixture
 
+@pytest.fixture
 def coll_1():
 
     return [
@@ -9,8 +9,8 @@ def coll_1():
         {"id": 939719570, "state": "EXECUTED", "date": "2018-06-30T02:08:58.425572"},
     ]
 
-@pytest.fixture
 
+@pytest.fixture
 def test_tranzact_list():
 
     return [
