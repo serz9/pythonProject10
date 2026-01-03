@@ -159,7 +159,7 @@ def test_read_csv_transaction(mocker):
     assert len(result) == 2
     assert result[1] == {'id':'2','name':'Irji'}
 
-def test_read_csv_transactions(mocker):
+def test_read_excel_transactions(mocker):
 
     data_excel = pd.DataFrame({'cl1': ['v1','v2'],
                                'cl2': ['v3','v4']})
