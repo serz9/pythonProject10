@@ -33,17 +33,18 @@ def read_excel_transactions(path_):
             head_ = reader.columns.tolist()
             excel_dict = dict(zip(head_, row))
             excel_dicts.append(excel_dict)
-        print(excel_dicts)
+
         return excel_dicts
-    except Exception as e :
+    except Exception as e:
         print(f"ошибка {e} ")
 
 #read_excel_transactions(r'C:\\Users\\serzh\\PycharmProjects\\pythonProject10\\src\\transactions_excel.xlsx')
 
-if __name__ == "__main__ " :
+if __name__ == "__main__ ":
 
     read_csv_transactions(r'C:\\Users\\serzh\\PycharmProjects\\pythonProject10\\src\\transactions.csv')
     read_excel_transactions(r'C:\\Users\\serzh\\PycharmProjects\\pythonProject10\\src\\transactions_excel.xlsx')
+
 
 
 
