@@ -15,7 +15,7 @@ def test_tranzact_list():
 
     return [
          {
-         "id" : 939719570,
+         "id": 939719570,
          "stat": "EXECUTED",
          "date": "2018-06-30T02:08:58.425572",
          "operationAmount": {
