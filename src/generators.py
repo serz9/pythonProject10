@@ -1,3 +1,5 @@
+from typing import Any
+
 tranzactions_list = [
 
         {
@@ -32,7 +34,7 @@ tranzactions_list = [
         }]
 
 
-def filter_by_currency(tranzactions_list: list[str], currency: [str]):
+def filter_by_currency(tranzactions_list: list[Any], currency: [str]):
 
     """   Функция фильтрации   """
 
