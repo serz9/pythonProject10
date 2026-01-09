@@ -1,5 +1,6 @@
 from typing import Union
 
+
 def get_mask_card_number(cartdate: Union[str]) -> Union[str]:
 
     """   Функция возвращает скрытый номер банковской карты    """
