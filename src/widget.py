@@ -4,7 +4,7 @@ from src.masks import get_mask_account, get_mask_card_number
 
 def mask_account_card(riquisites: str) -> str:
 
-    """ функция возвращае замаскированный счет или номер банковской карты"""
+    """   Функция возвращае замаскированный счет или номер банковской карты   """
 
     riquisites_letter: list[str] = []
     riquisites_number: list[str] = []
@@ -12,9 +12,9 @@ def mask_account_card(riquisites: str) -> str:
     riquisites_ = riquisites.split(' ')
 
     for i in riquisites_:
-        if i.isnumeric() == True:
+        if i.isnumeric():
             riquisites_number.append(i)
-        if i.isalpha() == True:
+        if i.isalpha():
             riquisites_letter.append(i)
 
     riquisites_letter_ = ' '.join(riquisites_letter)
@@ -29,12 +29,13 @@ def mask_account_card(riquisites: str) -> str:
         return res
 
 
-#mask_account_card('Счет 23452345234523452345')
+mask_account_card('Счет 23452345234523452345')
 mask_account_card('Visa 3456 4657 5767 7373')
+
 
 def get_time(timest: Union[str]) -> str:
 
-    """ функция изменяет формат строки в обьекте Data """
+    """   Функция изменяет формат строки в обьекте Data   """
 
     timestr_ = list(timest.split('T'))
     timestr_1 = list(timestr_[0].split('-'))

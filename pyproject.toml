@@ -7,6 +7,9 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
+pandas = "^2.3.3"
+pytest-mock = "^3.15.1"
+openpyxl = "^3.1.5"
 
 
 [tool.poetry.group.lint.dependencies]
@@ -19,6 +22,13 @@ flake8 = "^7.1.1"
 [tool.poetry.group.dev.dependencies]
 lint = "^1.2.1"
 pytest-cov = "^6.0.0"
+
+
+[tool.poetry.group.dep.dependencies]
+ksv = "^0.1.7"
+
+
+[tool.poetry.group.dependencies.dependencies]
 
 [build-system]
 requires = ["poetry-core"]
@@ -42,6 +52,8 @@ exclude = 'venv'
 
 [tool.isort]
 line_length = 119
+
+
 
 
 

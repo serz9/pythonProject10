@@ -3,9 +3,9 @@ from typing import Union
 
 def get_mask_card_number(cartdate: Union[str]) -> Union[str]:
 
-    """ функция возвращает скрытый номер банковской карты """
+    """   Функция возвращает скрытый номер банковской карты    """
 
-    if cartdate.isdigit() == False:
+    if not cartdate.isdigit():
         print(" Некорректные данные ")
         return " Некорректные данные "
     if len(cartdate) > 16:
@@ -14,8 +14,6 @@ def get_mask_card_number(cartdate: Union[str]) -> Union[str]:
     if len(cartdate) < 16:
         print(" Вы ввели  менее необходимого количество символов ")
         return " Вы ввели количество символов менее необходимого "
-
-
 
     new_cartdate = (
             cartdate[0:4]
@@ -36,7 +34,7 @@ def get_mask_account(bankaccount: Union[str]) -> Union[str]:
 
     """функция возвращает  скрытый номер банковского счета"""
 
-    if bankaccount.isdigit() == False:
+    if not bankaccount.isdigit():
         print(" Некорректные данные ")
         return " Некорректные данные "
     if len(bankaccount) > 20:
