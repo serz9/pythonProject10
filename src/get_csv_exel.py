@@ -43,8 +43,8 @@ def read_excel_transactions(path_):
 
 #read_excel_transactions(r'C:\\Users\\serzh\\PycharmProjects\\pythonProject10\\data\\transactions_excel.xlsx')
 
-if __name__ == "__main__ ":
 
+if __name__ == "__main__ ":
 
     read_csv_transactions(r'C:\\Users\\serzh\\PycharmProject\\pythonProject10\\data\\transactions.csv')
     read_excel_transactions(r'C:\\Users\\serzh\\PycharmProjects\\pythonProject10\\data\\transactions_excel.xlsx')
