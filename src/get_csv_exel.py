@@ -5,7 +5,7 @@ import pandas as pd
 
 import csv
 
-def read_csv_transactions(path_):
+def read_csv_transactions(path_ = None):
 
     """   Функция читает csv файлы   """
 
