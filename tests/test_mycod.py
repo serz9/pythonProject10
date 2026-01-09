@@ -96,13 +96,14 @@ def test_card_namber_generator():
 
     res = list(card_number_generator(1, 5))
     expected = [
-'0000 0000 0000 0001',
-'0000 0000 0000 0002',
-'0000 0000 0000 0003',
-'0000 0000 0000 0004',
-'0000 0000 0000 0005' ]
+    '0000 0000 0000 0001',
+    '0000 0000 0000 0002',
+    '0000 0000 0000 0003',
+    '0000 0000 0000 0004',
+    '0000 0000 0000 0005']
 
     assert res == expected
+
 
 def test_decor():
 
@@ -120,6 +121,7 @@ def test_decorators(capsys):
     print('functt ok')
     captured = capsys.readouterr()
     assert captured.out == 'functt ok\n'
+
 
 def test_get_time():
 
