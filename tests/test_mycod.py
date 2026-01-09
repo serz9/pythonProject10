@@ -135,9 +135,9 @@ def test_decorators(capsys):
 
     """    Функция проверки вывода в консоль   """
 
-     print('functt ok')
-     captured = capsys.readouterr()
-     assert captured.out == 'functt ok\n'
+    print('functt ok')
+    captured = capsys.readouterr()
+    assert captured.out == 'functt ok\n'
 
 def test_get_time():
 
@@ -161,11 +161,13 @@ def test_read_csv_transaction(mocker):
 
 def test_read_excel_transactions(mocker):
 
-    data_excel = pd.DataFrame({'cl1': ['v1','v2'],
-                               'cl2': ['v3','v4']})
+    """   Функция мокирует ексель  ридер   """
+
+    data_excel = pd.DataFrame({'cl1': ['v1', 'v2'],
+                               'cl2': ['v3', 'v4']})
 
     mocker.patch('pandas.read_excel', return_value=(data_excel))
     result = read_excel_transactions('test_file')
 
     assert len(result) == 2
-    assert result[1] == {'cl1':'v2','cl2':'v4'}
+    assert result[1] == {'cl1': 'v2', 'cl2': 'v4'}
