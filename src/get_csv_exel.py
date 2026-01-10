@@ -1,19 +1,16 @@
-
-
 import pandas as pd
 
 
 import csv
 
 
-def read_csv_transactions(path_ = None):
-
-    """   Функция читает csv файлы   """
+def read_csv_transactions(path_=None):
+    """Функция читает csv файлы"""
 
     try:
         csv_dict = []
-        with open(path_, encoding='utf-8') as file:
-            reader = csv.reader(file, delimiter=';')
+        with open(path_, encoding="utf-8") as file:
+            reader = csv.reader(file, delimiter=";")
             header_ = next(reader)
             for row in reader:
                 csv_str = dict(zip(header_, row))
@@ -23,15 +20,15 @@ def read_csv_transactions(path_ = None):
     except Exception as e:
         print(f"ошибка {e} ")
 
-#read_csv_transactions(r'C:\\Users\\serzh\\PycharmProjects\\pythonProject10\\data\\transactions.csv')
+
+# read_csv_transactions(r'C:\\Users\\serzh\\PycharmProjects\\pythonProject10\\data\\transactions.csv')
 
 
 def read_excel_transactions(path_):
-
-    """   Функция читает excel файлы   """
+    """Функция читает excel файлы"""
     try:
         excel_dicts = []
-        reader = pd.read_excel(path_, sheet_name='Лист 1')
+        reader = pd.read_excel(path_, sheet_name="Лист 1")
         for index, row in reader.iterrows():
             head_ = reader.columns.tolist()
             excel_dict = dict(zip(head_, row))
@@ -41,10 +38,11 @@ def read_excel_transactions(path_):
     except Exception as e:
         print(f"ошибка {e} ")
 
-#read_excel_transactions(r'C:\\Users\\serzh\\PycharmProjects\\pythonProject10\\data\\transactions_excel.xlsx')
+
+# read_excel_transactions(r'C:\\Users\\serzh\\PycharmProjects\\pythonProject10\\data\\transactions_excel.xlsx')
 
 
 if __name__ == "__main__ ":
 
-    read_csv_transactions(r'C:\\Users\\serzh\\PycharmProject\\pythonProject10\\data\\transactions.csv')
-    read_excel_transactions(r'C:\\Users\\serzh\\PycharmProjects\\pythonProject10\\data\\transactions_excel.xlsx')
+    read_csv_transactions(r"C:\\Users\\serzh\\PycharmProject\\pythonProject10\\data\\transactions.csv")
+    read_excel_transactions(r"C:\\Users\\serzh\\PycharmProjects\\pythonProject10\\data\\transactions_excel.xlsx")

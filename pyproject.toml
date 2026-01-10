@@ -39,9 +39,7 @@ max-line-length = 119
 
 [tool.black]
 line-length = 119
-exclude = """ ( /(
-                 | .git
-                 )) """
+
 
 
 
